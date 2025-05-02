@@ -4,30 +4,30 @@
         <div class="row row-40 row-md-50 justify-content-xl-between">
           <div class="col-md-10 col-lg-3 col-xl-4 wow fadeInRight">
             <div class="inset-xl-right-70 block-1">
-              <div class="footer-classic-brand"> 
-                <!--Brand--> 
-                <a href="index.html"><img class="logo-default" src="./images/logo-emmy.png" alt=""></a> </div>
-              <p class="footer-classic-text">If you are interested in cooperation and wholesale trade, write to us for detailed information. Emmy is always glad to new partners.</p>
+              <div class="footer-classic-brand">
+                <!--Brand-->
+                <a href="index.html"><img class="logo-default" src="{{asset('assets/images/logo-emmy.png')}}" alt=""></a> </div>
+              <p class="footer-classic-text">
+              Если вы заинтересованы в сотрудничестве и оптовой торговле, напишите нам, для получения подробной информации. Компания Emmy всегда рада новым партнёрам.</p>
             </div>
           </div>
           <div class="col-sm-6 col-md-7 col-lg-5 wow fadeInRight" data-wow-delay=".1s">
-            <h5 class="footer-modern-title">Navigation</h5>
+            <h5 class="footer-modern-title">Навигация</h5>
             <ul class="footer-modern-list footer-modern-list-2 d-sm-inline-block d-md-block">
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="our-team.html">Our Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="grid-shop.html">Shop</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
-              <li><a href="#">Wedding Furnitures</a></li>
-              <li><a href="#">Birthday Furnitures</a></li>
-              <li><a href="#">Macarons</a></li>
-              <li><a href="#">CupFurnitures</a></li>
-              <li><a href="#">Biscuits</a></li>
+              <li><a href="about-us.html">Главная</a></li>
+              <li><a href="our-team.html">Навигация</a></li>
+              <li><a href="contact-us.html">каталог</a></li>
+              <li><a href="grid-shop.html">Статьи</a></li>
+              <li><a href="#">Галирея</a></li>
+
+              <li><a href="#">экрани пад вану</a></li>
+              <li><a href="#">панели</a></li>
+              <li><a href="#">навесные шкафы</a></li>
+              <!-- <li><a href="#">Biscuits</a></li> -->
             </ul>
           </div>
           <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
-            <h5 class="footer-modern-title">Get in touch</h5>
+            <h5 class="footer-modern-title">Свяжитесь с нами</h5>
             <ul class="contacts-creative">
               <li>
                 <div class="unit unit-spacing-sm flex-column flex-md-row">
@@ -57,17 +57,17 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="footer-copyright">
-              <p>Copyright © 2025 <a href="https://netframe.am/" target="_blank">NetFrame</a>. All Right Reserved.<a href="privacy-policy.html">Privacy Policy</a></p>
+              <p> © 2025 Создание и разработка сайта  <a href="https://netframe.am/" target="_blank">NetFrame</a>.Все права защищены.<a href="privacy-policy.html">политика конфиденциальности</a></p>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="footer-payment-icon">
                <a href="#">
-                <img src="./images/Mir.png" alt="">
-                <img src="./images/sbp.png" alt="">
-                <img src="./images/Visa.png" alt="">
-                <img src="./images/MasterCard.png" alt="">
-              </a> 
+                <img src="{{asset('assets/images/Mir.png')}}" alt="">
+                <img src="{{asset('assets/images/sbp.png')}}" alt="">
+                <img src="{{asset('assets/images/MasterCard.png')}}" alt="">
+                <img src="{{asset('assets/images/Visa.png')}}" alt="">
+              </a>
               </div>
           </div>
         </div>

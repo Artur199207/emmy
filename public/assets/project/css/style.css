@@ -2691,7 +2691,7 @@ html .list-inline-sm {
 	margin-left: -5px;
 	margin-right: -5px;
 	font-size: 35px;
-	
+
 }
 
 html .list-inline-sm>* {
@@ -3577,7 +3577,7 @@ hr {
 .button-primary:active {
 	color: #fff;
 	background-color: #626469  ;
-	border-color: #626469  
+	border-color: #626469
 }
 
 .button-primary.button-ujarak::before {
@@ -3599,11 +3599,11 @@ hr {
 .button-primary-2:active {
 	color: #fff;
 	background-color: #626469  ;
-	border-color: #626469  
+	border-color: #626469
 }
 
 .button-primary-2.button-ujarak::before {
-	background: #626469  
+	background: #626469
 }
 
 .button-primary-2.button-zakaria:after {
@@ -3621,11 +3621,11 @@ hr {
 .button-primary-3:active {
 	color: #fff;
 	background-color:#626469  ;
-	border-color:#626469  
+	border-color:#626469
 }
 
 .button-primary-3.button-ujarak::before {
-	background:#626469  
+	background:#626469
 }
 
 .button-primary-3.button-zakaria:after {
@@ -3742,7 +3742,7 @@ hr {
 .button-gray-14:focus {
 	color: #fff;
 	background-color: #626469  ;
-	border-color: #626469  
+	border-color: #626469
 }
 
 .button-gray-14:hover,
@@ -3768,7 +3768,7 @@ hr {
 }
 
 .button-gray-14.button-zakaria:after {
-	background: #626469  
+	background: #626469
 }
 
 .button-default-outline,
@@ -4217,13 +4217,13 @@ hr {
 .btn-primary,
 .btn-primary:active,
 .btn-primary:focus {
-	color: #fff;
+	/* color: #fff; */
 	background: #50BECF;
 	border-color: #50BECF
 }
 
 .btn-primary:hover {
-	color: #fff;
+	/* color: #fff; */
 	background: #000;
 	border-color: #000
 }
@@ -4240,7 +4240,7 @@ hr {
 .bg-primary .button-primary:focus {
 	color: #505050;
 	background-color: #fff;
-	border-color: #fff
+	/* border-color: #fff */
 }
 
 .context-dark .button-primary:hover,
@@ -7236,7 +7236,7 @@ textarea.textarea-lg {
 }
 
 .footer-payment-icon img {
-	
+
 	width: 45px;
 	margin-right: 5px;
 	margin-top: 5px;
@@ -15091,7 +15091,7 @@ html.ch-navbar-fixed-linked .page {
 	align-items: center;
 	border-radius: 30px;
 	color: inherit;
-	background: #626469  
+	background: #626469
 }
 
 .ch-navbar-corporate.ch-navbar-static .ch-navbar-search-toggle span {
@@ -15130,7 +15130,7 @@ html.ch-navbar-fixed-linked .page {
 	border-width: 1px;
 	border-radius: 30px;
 	border-color: transparent;
-	background: #626469  
+	background: #626469
 }
 
 .ch-navbar-corporate.ch-navbar-static .ch-search .form-label {
@@ -18587,7 +18587,7 @@ html:not(.ie-10):not(.ie-11):not(.ie-edge) .countdown-circle svg {
 }
 
 /*********************************************************
-			       owl-carousel 
+			       owl-carousel
 **********************************************************/
 .owl-carousel .animated {
 	animation-duration: 1000ms;
