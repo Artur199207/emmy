@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -10,6 +11,7 @@ Route::get('/', function () {
 });
 
 Route::get('/',[\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+Route::get('/locale/{locale}', [LocalizationController::class, 'setLang'])->name('setLang');
 
 Auth::routes();
 

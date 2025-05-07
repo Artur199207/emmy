@@ -18,12 +18,13 @@
 </style>
 
 <header class="section page-header">
+
     <div class="header-top">
       <div class="container">
         <div class="row d-flex align-items-center">
           <div class="col-xl-6 col-lg-6 col-md-10">
             <div class="topbar-left text-left">
-              <p>Добро пожаловать в интернет-магазин  Emmy</p>
+              <p>@lang('public.title')</p>
             </div>
           </div>
           <div class="col-12 col-lg-6 col-xl-6">
@@ -35,8 +36,8 @@
                     <span id="selected-language">English</span>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#" data-lang="Русский">Русский</a>
-                    <a class="dropdown-item" href="#" data-lang="English">English</a>
+                    <a class="dropdown-item" href="{{ url('locale/ru') }}">Русский</a>
+                    <a class="dropdown-item" href="{{ url('locale/en') }}" >English</a>
                   </div>
                 </div>
               </div>
@@ -100,11 +101,11 @@
               <button class="ch-navbar-toggle" data-ch-navbar-toggle=".ch-navbar-nav-wrap"><span></span></button>
               <!-- RD Navbar Brand-->
               <div class="ch-navbar-brand">
-                <!--Brand--><a href="index.html"><img class="logo-default" src="{{asset('assets/project/image/logo-emmy.png')}}" alt="" /></a> </div>
+                <!--Brand--><a href="{{url('/')}}"><img class="logo-default" src="{{asset('assets/project/image/logo-emmy.png')}}" alt="" /></a> </div>
             </div>
             <div class="ch-navbar-nav-wrap">
               <ul class="ch-navbar-nav">
-                <li class="ch-nav-item active"><a class="ch-nav-link" href="index.html">Главная</a> </li>
+                <li class="ch-nav-item active"><a class="ch-nav-link" href="index.html">@lang('public.home')</a> </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="#">Навигация</a>
                   <ul class="ch-menu ch-navbar-dropdown">
                     <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="about-us.html">О компании</a> </li>
