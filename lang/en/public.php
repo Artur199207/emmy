@@ -3,5 +3,5 @@ return
     [
         'title' => 'Welcome to Emmy`s online store',
         'home' => 'Home',
-        
+        'languagesChange'=>'language',
     ];

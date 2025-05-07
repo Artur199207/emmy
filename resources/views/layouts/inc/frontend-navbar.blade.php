@@ -31,7 +31,7 @@
             <div class="header-top-dropdown d-flex justify-content-center justify-content-lg-end">
               <div class="single-dropdown">
                 <div class="dropdown show">
-                  <span class="d-none d-sm-inline-block">язык:</span>
+                  <span class="d-none d-sm-inline-block">@lang('public.languagesChange'):</span>
                   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span id="selected-language">English</span>
                   </a>
