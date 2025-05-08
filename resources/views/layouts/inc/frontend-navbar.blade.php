@@ -106,7 +106,7 @@
             <div class="ch-navbar-nav-wrap">
               <ul class="ch-navbar-nav">
                 <li class="ch-nav-item active"><a class="ch-nav-link" href="index.html">@lang('public.home')</a> </li>
-                <li class="ch-nav-item"><a class="ch-nav-link" href="#">Навигация</a>
+                <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.navigation')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
                     <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="about-us.html">О компании</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="what-we-offer.html">наши приложения</a> </li>
