@@ -46,7 +46,7 @@
 
               <div class="single-dropdown">
                 <div class="dropdown show">
-                  <span class="d-none d-sm-inline-block">Валюта:</span>
+                  <span class="d-none d-sm-inline-block">@lang('public.Currency')</span>
                   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="currencyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span id="selected-currency">USD $</span>
                   </a>
@@ -63,11 +63,11 @@
               <div class="single-dropdown">
                 <div class="dropdown show">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"> Вход  /  Регистрация </a>
+                    aria-expanded="false"> @lang('public.LoginRegistration') </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                    <a class="dropdown-item" href="#">Вход</a>
-                   <a class="dropdown-item" href="#">Регистрация</a> </div>
+                    <a class="dropdown-item" href="#">@lang('public.Login')</a>
+                   <a class="dropdown-item" href="#">@lang('public.Registration')</a> </div>
                 </div>
               </div>
             </div>
@@ -108,22 +108,22 @@
                 <li class="ch-nav-item active"><a class="ch-nav-link" href="index.html">@lang('public.home')</a> </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.navigation')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
-                    <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="about-us.html">О компании</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="what-we-offer.html">наши приложения</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="our-team.html">Наша команда</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="testimonials.html">Отзывы</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="pricing-list.html">Прайс-лист</a> </li>
+                    <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="about-us.html">@lang('public.company')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="what-we-offer.html">@lang('public.applications')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="our-team.html">@lang('public.team')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="testimonials.html">@lang('public.reviews')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="pricing-list.html">@lang('public.pricelist')т</a> </li>
                   </ul>
                 </li>
-                <li class="ch-nav-item"><a class="ch-nav-link" href="grid-shop.html">каталог</a>
+                <li class="ch-nav-item"><a class="ch-nav-link" href="grid-shop.html">@lang('public.catalog')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="ecwid-shop.html">экрани пад вану</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop.html">панели</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop-leftsidebar.html">навесные шкафы</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop-rightsidebar.html">тумбы с раковинами</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list.html">зеркала</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list-leftsidebar.html">зеркальные шкафы</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list-rightsidebar.html">унитазы</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="ecwid-shop.html">@lang('public.bathscreen')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop.html">@lang('public.panels')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop-leftsidebar.html">@lang('public.wallcabinets')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop-rightsidebar.html">@lang('public.cabinets')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list.html">@lang('public.mirrors')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list-leftsidebar.html">@lang('public.mirrorcabinets')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list-rightsidebar.html">@lang('public.toilets')</a> </li>
 
                   </ul>
                 </li>
@@ -142,36 +142,36 @@
 
                   </ul> -->
                 </li>
-                <li class="ch-nav-item"><a class="ch-nav-link" href="grid-gallery.html">Галирея</a>
+                <li class="ch-nav-item"><a class="ch-nav-link" href="grid-gallery.html">@lang('public.Gallery')</a>
                  
                 </li>
-                <li class="ch-nav-item"><a class="ch-nav-link" href="#">элементы</a>
+                <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.elements')</a>
                   <ul class="ch-menu ch-navbar-megamenu">
                     <li class="ch-megamenu-item ch-megamenu-item-1">
-                      <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-apps"></span><span class="ch-megamenu-text">элементы</span></h6>
+                      <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-apps"></span><span class="ch-megamenu-text">@lang('public.elements')</span></h6>
                       <ul class="ch-megamenu-list">
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="typography.html">экрани пад вану</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="icon-lists.html">панели</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="progress-bars.html">навесные шкафы</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="calls-to-action.html">тумбы с раковинами</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="tabs-and-accordions.html">зеркала</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="buttons.html">зеркальные шкафы</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="tables.html">унитазы</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="typography.html">@lang('public.bathscreen')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="icon-lists.html">@lang('public.panels')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="progress-bars.html">@lang('public.wallcabinets')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="calls-to-action.html">@lang('public.cabinets')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="tabs-and-accordions.html">@lang('public.mirrors')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="buttons.html">@lang('public.mirrorcabinets')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="tables.html">@lang('public.toilets')</a></li>
 
                       </ul>
                     </li>
                     <li class="ch-megamenu-item ch-megamenu-item-2">
-                      <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-layers"></span><span class="ch-megamenu-text">Оплата и доставка</span></h6>
+                      <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-layers"></span><span class="ch-megamenu-text">@lang('public.Payment')</span></h6>
                       <ul class="ch-megamenu-list">
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="404-page.html">Страница 404</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="coming-soon.html">новинки</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="contact-us.html">Contact Us</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="privacy-policy.html">политика конфиденциальности</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="search-results.html">Результаты поиска</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="404-page.html">@lang('public.Page')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="coming-soon.html">@lang('public.newitems')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="contact-us.html">@lang('public.Contactus')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="privacy-policy.html">@lang('public.privacypolicy')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="search-results.html">@lang('public.Searchresults')</a></li>
                       </ul>
                     </li>
                     <li class="ch-megamenu-item ch-megamenu-banner">
-                      <div class="ch-megamenu-title"><span class="ch-megamenu-icon mdi icon-side-lamp-1"></span><span class="ch-megamenu-text">Добро пожаловать</span></div>
+                      <div class="ch-megamenu-title"><span class="ch-megamenu-icon mdi icon-side-lamp-1"></span><span class="ch-megamenu-text">@lang('public.Welcome')</span></div>
                       <a class="banner-classic" href="grid-shop.html"><img src="{{asset('assets/images/about/banner.jpg')}}" alt="" width="300" height="202"/></a> </li>
                   </ul>
                 </li>
@@ -185,7 +185,7 @@
                 <form class="ch-search" action="search-results.html" data-search-live="ch-search-results-live" method="GET">
                   <div class="form-wrap">
                     <input class="ch-navbar-search-form-input form-input" id="ch-navbar-search-form-input" type="text" name="s" autocomplete="off"/>
-                    <label class="form-label" for="ch-navbar-search-form-input">Search...</label>
+                    <label class="form-label" for="ch-navbar-search-form-input">@lang('public.Search')</label>
                     <div class="ch-search-results-live" id="ch-search-results-live"></div>
                     <button class="ch-search-form-submit fl-bigmug-line-search74" type="submit"></button>
                   </div>
@@ -196,15 +196,15 @@
                 <button class="ch-navbar-basket fl-bigmug-line-shopping202" data-ch-navbar-toggle=".cart-inline"><span>2</span></button>
                 <div class="cart-inline">
                   <div class="cart-inline-header">
-                    <h5 class="cart-inline-title">In cart:<span> 2</span> Products</h5>
-                    <h6 class="cart-inline-title">Total price:<span> $30</span></h6>
+                    <h5 class="cart-inline-title">@lang('public.Incart'):<span> 2</span> @lang('public.Products')</h5>
+                    <h6 class="cart-inline-title">@lang('public.Totalprice'):<span> $30</span></h6>
                   </div>
                   <div class="cart-inline-body">
                     <div class="cart-inline-item">
                       <div class="unit unit-spacing-sm align-items-center">
                         <div class="unit-left"><a class="cart-inline-figure" href="single-product.html"><img src="images/about/post-mini-1.jpg" alt="" width="100" height="90"/></a></div>
                         <div class="unit-body">
-                          <h6 class="cart-inline-name"><a href="single-product.html">Unicorn Furniture</a></h6>
+                          <h6 class="cart-inline-name"><a href="single-product.html">@lang('public.Unicorn')</a></h6>
                           <div>
                             <div class="group-xs group-middle">
                               <div class="table-cart-stepper">
@@ -220,7 +220,7 @@
                       <div class="unit unit-spacing-sm align-items-center">
                         <div class="unit-left"><a class="cart-inline-figure" href="single-product.html"><img src="images/about/post-mini-2.jpg" alt="" width="100" height="90"/></a></div>
                         <div class="unit-body">
-                          <h6 class="cart-inline-name"><a href="single-product.html">Strawberry CupFurnitures</a></h6>
+                          <h6 class="cart-inline-name"><a href="single-product.html">@lang('public.Strawberry')</a></h6>
                           <div>
                             <div class="group-xs group-middle">
                               <div class="table-cart-stepper">
@@ -234,7 +234,7 @@
                     </div>
                   </div>
                   <div class="cart-inline-footer">
-                    <div class="group-sm"><a class="button button-default-outline-2 button-zakaria" href="cart-page.html">Go to cart</a><a class="button button-primary button-zakaria" href="checkout.html">Checkout</a></div>
+                    <div class="group-sm"><a class="button button-default-outline-2 button-zakaria" href="cart-page.html">@lang('public.Gotocart')</a><a class="button button-primary button-zakaria" href="checkout.html">@lang('public.Checkou')</a></div>
                   </div>
                 </div>
               </div>
@@ -244,7 +244,7 @@
             <div class="ch-navbar-project">
               <div class="ch-navbar-project-header">
                 <button class="ch-navbar-project-hamburger ch-navbar-project-hamburger-close" type="button" data-multitoggle=".ch-navbar-main" data-multitoggle-blur=".ch-navbar-wrap" data-multitoggle-isolate><span class="project-close"><span></span><span></span></span></button>
-                <h5 class="ch-navbar-project-title">Наши контакты</h5>
+                <h5 class="ch-navbar-project-title">@lang('public.Ourcontacts')</h5>
               </div>
               <div class="ch-navbar-project-content">
                 <div>
@@ -256,10 +256,9 @@
                          <img src="{{asset('assets/images/about/image-8.jpg')}}" class="img-responsive" alt="" />
                        </div>
                     <ul class="contacts-modern">
-                      <li><a href="#">Если вы заинтересованы в сотрудничестве и оптовой торговле,
-                         напишите нам, для получения подробной информации.
+                      <li><a href="#">@lang('public.titlefooter')
                          <br/>
-                         Компания Emmy всегда рада новым партнёрам.</a></li>
+                         @lang('public.Emmypartners')</a></li>
                       <li><a href="tel:#">+7 926 820-65-74</a></li>
                     </ul>
                   </div>
