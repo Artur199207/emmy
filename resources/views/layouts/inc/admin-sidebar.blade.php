@@ -25,18 +25,18 @@
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-layout"></i>
-                  <div class="text-truncate" data-i18n="Layouts">Banner</div>
+                  <div class="text-truncate" data-i18n="Layouts">Баннер</div>
               </a>
 
               <ul class="menu-sub">
                   <li class="menu-item">
                       <a href="{{ route('banners.create') }}" class="menu-link">
-                          <div class="text-truncate" data-i18n="Blank">Ավելացնել Banner</div>
+                          <div class="text-truncate" data-i18n="Blank">Добавить </div>
                       </a>
                   </li>
                   <li class="menu-item">
                       <a href="{{ route('banners.index') }}" class="menu-link">
-                          <div class="text-truncate" data-i18n="Blank">Դիտել Banner-ները</div>
+                          <div class="text-truncate" data-i18n="Blank">Просматривать </div>
                       </a>
                   </li>
 
@@ -45,18 +45,18 @@
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-layout"></i>
-                  <div class="text-truncate" data-i18n="Layouts">Shiping</div>
+                  <div class="text-truncate" data-i18n="Layouts">Шиппинг</div>
               </a>
 
               <ul class="menu-sub">
                   <li class="menu-item">
                       <a href="{{ route('shipings.create') }}" class="menu-link">
-                          <div class="text-truncate" data-i18n="Blank">Ավելացնել </div>
+                          <div class="text-truncate" data-i18n="Blank"> Добавить</div>
                       </a>
                   </li>
                   <li class="menu-item">
                       <a href="{{ route('shipings.index') }}" class="menu-link">
-                          <div class="text-truncate" data-i18n="Blank">Դիտել </div>
+                          <div class="text-truncate" data-i18n="Blank"> Просматривать</div>
                       </a>
                   </li>
 
@@ -65,18 +65,18 @@
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-layout"></i>
-                  <div class="text-truncate" data-i18n="Layouts">Offer</div>
+                  <div class="text-truncate" data-i18n="Layouts">Предложение</div>
               </a>
 
               <ul class="menu-sub">
                   <li class="menu-item">
                       <a href="{{ route('offers.create') }}" class="menu-link">
-                          <div class="text-truncate" data-i18n="Blank">Ավելացնել </div>
+                          <div class="text-truncate" data-i18n="Blank">Добавить </div>
                       </a>
                   </li>
                   <li class="menu-item">
                       <a href="{{ route('offers.index') }}" class="menu-link">
-                          <div class="text-truncate" data-i18n="Blank">Դիտել </div>
+                          <div class="text-truncate" data-i18n="Blank">Просматривать </div>
                       </a>
                   </li>
 
