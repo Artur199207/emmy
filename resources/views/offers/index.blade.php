@@ -7,7 +7,7 @@
         }
     </style>
     <div class="container">
-        <h1>Բաններ</h1>
+        <h1>элемент</h1>
 
         @if (session('success'))
             <div class="alert alert-success">
@@ -15,17 +15,17 @@
             </div>
         @endif
 
-        <a href="{{ route('offers.create') }}" class="btn btn-primary mb-3 hovcolor">Ավելացնել նոր բաններ</a>
-        <a href="{{ url('admin/dashboard') }}" class="btn btn-primary mb-3 hovcolor">🔙 Վերադառնալ Վահանակ</a>
+        <a href="{{ route('offers.create') }}" class="btn btn-primary mb-3 hovcolor">Добавить новый элемент</a>
+        <a href="{{ url('admin/dashboard') }}" class="btn btn-primary mb-3 hovcolor">🔙 Вернуться к панели инструментов</a>
         @if ($offers->count())
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Վերնագիր (RU)</th>
-                        <th>Վերնագիր (EN)</th>
-                        <th>Նկար</th>
-                        <th>Գործողություններ</th>
+                        <th>Заголовок (RU)</th>
+                        <th>Заголовок (EN)</th>
+                        <th>Изображение:</th>
+                        <th>Действия</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,14 +40,14 @@
                             </td>
                             <td>
                                 <a href="{{ route('offers.edit', $offer->id) }}"
-                                    class="btn btn-warning btn-sm">Խմբագրել</a>
+                                    class="btn btn-warning btn-sm">Редактировать</a>
 
                                 <form action="{{ route('offers.destroy', $offer->id) }}" method="POST"
                                     style="display:inline-block;"
-                                    onsubmit="return confirm('Վստա՞հ եք, որ ցանկանում եք ջնջել։');">
+                                    onsubmit="return confirm('Вы уверены, что хотите удалить?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">Ջնջել</button>
+                                    <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
                                 </form>
                             </td>
                         </tr>

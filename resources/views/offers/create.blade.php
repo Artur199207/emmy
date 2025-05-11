@@ -11,7 +11,7 @@
 </style>
 
     <div class="container">
-        <h1>Ավելացնել նոր բաներ</h1>
+        <h1>Добавить новый элемент</h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -23,28 +23,28 @@
             </div>
         @endif
 
-        <a href="{{ url('admin/dashboard') }}" class="btn btn-primary mb-3">🔙 Վերադառնալ Վահանակ</a>
+        <a href="{{ url('admin/dashboard') }}" class="btn btn-primary mb-3">🔙 Вернуться к панели инструментов</a>
 
         <form action="{{ route('offers.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
-                <label for="descriptionRu" class="form-action">Նկարագրություն (RU)</label>
+                <label for="descriptionRu" class="form-action">Описание (RU)</label>
                 <textarea name="descriptionRu" id="mySummernote" class="form-control" rows="4" required>{{ old('descriptionRu') }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label for="descriptionEn" class="form-action">Նկարագրություն (EN)</label>
+                <label for="descriptionEn" class="form-action">Описание (EN)</label>
                 <textarea name="descriptionEn" id="mySummernote1" class="form-control" rows="4" required>{{ old('descriptionEn') }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-action">Նկար</label>
+                <label for="image" class="form-action">Изображение:</label>
                 <input type="file" name="image" class="form-control" accept="image/*" required>
             </div>
 
-            <button type="submit" class="btn btn-success">Պահպանել</button>
-            <a href="{{ route('offers.index') }}" class="btn btn-success">Հետ</a>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+            <a href="{{ route('offers.index') }}" class="btn btn-success">Назад</a>
         </form>
     </div>
 @endsection
