@@ -51,7 +51,7 @@ class ShipingController extends Controller
         return view('shipings.edit', compact('shipings'));
     }
 
-    public function update(Request $request, $id)
+    public function update(ShipingRequest $request, $id)
 {
     $shiping = Shiping::findOrFail($id);
 
