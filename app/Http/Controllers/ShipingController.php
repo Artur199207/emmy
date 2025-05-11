@@ -38,7 +38,7 @@ class ShipingController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('shipings.index')->with('success', 'Բանները հաջողությամբ ավելացվեցին։');
+        return redirect()->route('shipings.index')->with('success', 'Элементы были успешно добавлены.');
     }
     public function show($id)
     {
@@ -71,7 +71,7 @@ class ShipingController extends Controller
 
     $shiping->update($data);
 
-    return redirect()->route('shipings.index')->with('success', 'Բանները հաջողությամբ թարմացվեցին։');
+    return redirect()->route('shipings.index')->with('success', 'Элементы были успешно обновлены.');
 }
 
 
@@ -80,6 +80,6 @@ class ShipingController extends Controller
         $shipings = Shiping::findOrFail($id);
         $shipings->delete();
 
-        return redirect()->route('shipings.index')->with('success', 'Բանները հաջողությամբ ջնջվեցին։');
+        return redirect()->route('shipings.index')->with('success', 'Элементы были успешно удалены.');
     }
 }

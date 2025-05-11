@@ -36,7 +36,7 @@ class OfferController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('offers.index')->with('success', 'Բանները հաջողությամբ ավելացվեցին։');
+        return redirect()->route('offers.index')->with('success', 'Элементы были успешно добавлены.');
     }
     public function show($id)
     {
@@ -67,7 +67,7 @@ class OfferController extends Controller
 
     $offers->update($data);
 
-    return redirect()->route('offers.index')->with('success', 'Բանները հաջողությամբ թարմացվեցին։');
+    return redirect()->route('offers.index')->with('success', 'Элементы были успешно обновлены.');
 }
 
 
@@ -76,6 +76,6 @@ class OfferController extends Controller
         $offers = Offer::findOrFail($id);
         $offers->delete();
 
-        return redirect()->route('offers.index')->with('success', 'Բանները հաջողությամբ ջնջվեցին։');
+        return redirect()->route('offers.index')->with('success', 'Элементы были успешно удалены.');
     }
 }

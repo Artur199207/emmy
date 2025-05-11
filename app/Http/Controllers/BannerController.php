@@ -44,7 +44,7 @@ class BannerController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('banners.index')->with('success', 'Բանները հաջողությամբ ավելացվեցին։');
+        return redirect()->route('banners.index')->with('success', 'Элементы были успешно добавлены.');
     }
 
    
@@ -81,7 +81,7 @@ class BannerController extends Controller
 
         $banner->update($data);
 
-        return redirect()->route('banners.index')->with('success', 'Բանները հաջողությամբ թարմացվեցին։');
+        return redirect()->route('banners.index')->with('success', 'Элементы были успешно обновлены.');
     }
 
  
@@ -90,6 +90,6 @@ class BannerController extends Controller
         $banner = BannerModel::findOrFail($id);
         $banner->delete();
 
-        return redirect()->route('banners.index')->with('success', 'Բանները հաջողությամբ ջնջվեցին։');
+        return redirect()->route('banners.index')->with('success', 'Элементы были успешно удалены.');
     }
 }

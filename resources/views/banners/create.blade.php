@@ -5,6 +5,12 @@
         .hovcolor:hover {
             color: black !important;
         }
+        .form-action{
+            text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 18px;
+        }
     </style>
     <div class="container">
         <h1>Ավելացնել նոր բաններ</h1>
@@ -23,27 +29,27 @@
             @csrf
 
             <div class="mb-3">
-                <label for="titleRu" class="form-label">Վերնագիր (RU)</label>
+                <label for="titleRu" class="form-action">Վերնագիր (RU)</label>
                 <input type="text" name="titleRu" class="form-control" value="{{ old('titleRu') }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="titleEn" class="form-label">Վերնագիր (EN)</label>
+                <label for="titleEn" class="form-action">Վերնագիր (EN)</label>
                 <input type="text" name="titleEn" class="form-control" value="{{ old('titleEn') }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="descriptionRu" class="form-label">Նկարագրություն (RU)</label>
+                <label for="descriptionRu" class="form-action">Նկարագրություն (RU)</label>
                 <textarea name="descriptionRu" class="form-control" rows="4" required>{{ old('descriptionRu') }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label for="descriptionEn" class="form-label">Նկարագրություն (EN)</label>
+                <label for="descriptionEn" class="form-action">Նկարագրություն (EN)</label>
                 <textarea name="descriptionEn" class="form-control"  rows="4" required>{{ old('descriptionEn') }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">Նկար</label>
+                <label for="image" class="form-action">Նկար</label>
                 <input type="file" name="image" class="form-control" accept="image/*" required>
             </div>
 
