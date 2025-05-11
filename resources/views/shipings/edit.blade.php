@@ -49,7 +49,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Թարմացնել</button>
-        <a href="{{ route('shipings.index') }}" class="btn btn-secondary">Հետ</a>
+        <a href="{{ route('shipings.index') }}" class="btn btn-primary">Հետ</a>
     </form>
 </div>
 @endsection

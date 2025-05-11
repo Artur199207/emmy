@@ -14,33 +14,24 @@
         </div>
     @endif
 
-    <form action="{{ route('banners.update', $banner->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('offers.update', $offers->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-        <div class="mb-3">
-            <label for="titleRu" class="form-label">Վերնագիր (RU)</label>
-            <input type="text" name="titleRu" class="form-control" value="{{ old('titleRu', $banner->titleRu) }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="titleEn" class="form-label">Վերնագիր (EN)</label>
-            <input type="text" name="titleEn" class="form-control" value="{{ old('titleEn', $banner->titleEn) }}" required>
-        </div>
 
         <div class="mb-3">
             <label for="descriptionRu" class="form-label">Նկարագրություն (RU)</label>
-            <textarea name="descriptionRu" class="form-control" rows="4" required>{{ old('descriptionRu', $banner->descriptionRu) }}</textarea>
+            <textarea name="descriptionRu" class="form-control" id="mySummernote" rows="4" required>{{ old('descriptionRu', $offers->descriptionRu) }}</textarea>
         </div>
 
         <div class="mb-3">
             <label for="descriptionEn" class="form-label">Նկարագրություն (EN)</label>
-            <textarea name="descriptionEn" class="form-control" rows="4" required>{{ old('descriptionEn', $banner->descriptionEn) }}</textarea>
+            <textarea name="descriptionEn" class="form-control" id="mySummernote1" rows="4" required>{{ old('descriptionEn', $offers->descriptionEn) }}</textarea>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Ընթացիկ Նկարը</label><br>
-            <img src="{{ asset('storage/' . $banner->image) }}" alt="Banner Image" width="150">
+            <img src="{{ asset('storage/' . $offers->image) }}" alt="Banner Image" width="150">
         </div>
 
         <div class="mb-3">
@@ -49,7 +40,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Թարմացնել</button>
-        <a href="{{ route('banners.index') }}" class="btn btn-primary">Հետ</a>
+        <a href="{{ route('offers.index') }}" class="btn btn-primary">Հետ</a>
     </form>
 </div>
 @endsection

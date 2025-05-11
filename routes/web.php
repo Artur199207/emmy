@@ -5,6 +5,7 @@ use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ShipingController;
 
 Route::get('/', function () {
@@ -30,11 +31,18 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
 
 
-   Route::get('/shipings', [ShipingController::class, 'index'])->name('shipings.index');
-Route::get('/shipings/create', [ShipingController::class, 'create'])->name('shipings.create');
-Route::post('/shipings', [ShipingController::class, 'store'])->name('shipings.store');
-Route::get('/shipings/{shiping}/edit', [ShipingController::class, 'edit'])->name('shipings.edit');
-Route::put('/shipings/{shiping}', [ShipingController::class, 'update'])->name('shipings.update');
-Route::delete('/shipings/{shiping}', [ShipingController::class, 'destroy'])->name('shipings.destroy');
+    Route::get('/shipings', [ShipingController::class, 'index'])->name('shipings.index');
+    Route::get('/shipings/create', [ShipingController::class, 'create'])->name('shipings.create');
+    Route::post('/shipings', [ShipingController::class, 'store'])->name('shipings.store');
+    Route::get('/shipings/{shiping}/edit', [ShipingController::class, 'edit'])->name('shipings.edit');
+    Route::put('/shipings/{shiping}', [ShipingController::class, 'update'])->name('shipings.update');
+    Route::delete('/shipings/{shiping}', [ShipingController::class, 'destroy'])->name('shipings.destroy');
 
+
+     Route::get('/offers', [OfferController::class, 'index'])->name('offers.index');
+    Route::get('/offers/create', [OfferController::class, 'create'])->name('offers.create');
+    Route::post('/offers', [OfferController::class, 'store'])->name('offers.store');
+    Route::get('/offers/{shiping}/edit', [OfferController::class, 'edit'])->name('offers.edit');
+    Route::put('/offers/{shiping}', [OfferController::class, 'update'])->name('offers.update');
+    Route::delete('/offers/{shiping}', [OfferController::class, 'destroy'])->name('offers.destroy');
 });

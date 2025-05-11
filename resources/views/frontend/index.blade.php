@@ -77,34 +77,17 @@
         <section class="section section-md bg-default text-md-left">
             <div class="container">
                 <div class="row row-70 row-lg-50 justify-content-center align-items-md-center">
+                    @foreach ($offers as $offer)
                     <div class="col-md-12 col-lg-6 col-xl-6">
                         <div class="aboutUs">
-                            <h2 class="text-transform-capitalize wow fadeInRight">What We Offer</h2>
-                            <!-- Bootstrap collapse-->
-
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nibh dolor, gravida
-                                faucibus dolor
-                                consectetur, pulvinar rhoncus risus. Fusce vel rutrum mi. Suspendisse pretium tellus eu
-                                ipsum pellentesque
-                                convallis. Ut mollis libero eu massa imperdiet faucibus vitae non diam. Sed egestas felis
-                                libero, ut
-                                suscipit nisl varius non. Proin eget suscipit nulla. Nulla facilisi. In hac habitasse platea
-                                dictumst.
-                            </p>
-                            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the
-                                industry's standach dummy.</p>
-                            <ul class="list-marked">
-                                <li>Sed egestas urna eget ipsum condimentum</li>
-                                <li>Vivamus dapibus massa non orci tincidunt</li>
-                                <li>Maecenas lacinia blandit ligula, at tristique mi sagittis sit</li>
-
-                            </ul>
+                            <p>{!! app()->getLocale() === 'ru' ? $offer->descriptionRu : $offer->descriptionEn !!}</p>
                             <a class="button button-sm button-primary button-zakaria" href="grid-shop.html">shop now</a>
                         </div>
                     </div>
+                    @endforeach
                     <div class="col-md-12 col-lg-6 col-xl-6">
-                        <div class="decorative-box text-center"><img src="images/about/aboutimg.png" alt="" />
+                        <div class="decorative-box text-center">
+                            <img src="{{ asset('storage/' . $offer->image) }}" alt="" />
                         </div>
                     </div>
 

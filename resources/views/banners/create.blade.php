@@ -39,7 +39,7 @@
 
             <div class="mb-3">
                 <label for="descriptionEn" class="form-label">Նկարագրություն (EN)</label>
-                <textarea name="descriptionEn" class="form-control" rows="4" required>{{ old('descriptionEn') }}</textarea>
+                <textarea name="descriptionEn" class="form-control"  rows="4" required>{{ old('descriptionEn') }}</textarea>
             </div>
 
             <div class="mb-3">
@@ -48,7 +48,7 @@
             </div>
 
             <button type="submit" class="btn btn-success">Պահպանել</button>
-            <a href="{{ route('banners.index') }}" class="btn btn-secondary">Հետ</a>
+            <a href="{{ route('banners.index') }}" class="btn btn-success">Հետ</a>
         </form>
     </div>
 @endsection
