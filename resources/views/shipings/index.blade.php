@@ -15,9 +15,9 @@
             </div>
         @endif
 
-        <a href="{{ route('banners.create') }}" class="btn btn-primary mb-3 hovcolor">Ավելացնել նոր բաններ</a>
+        <a href="{{ route('shipings.create') }}" class="btn btn-primary mb-3 hovcolor">Ավելացնել նոր բաններ</a>
         <a href="{{ url('admin/dashboard') }}" class="btn btn-primary mb-3 hovcolor">🔙 Վերադառնալ Վահանակ</a>
-        @if ($banners->count())
+        @if ($shipings->count())
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -29,20 +29,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($banners as $banner)
+                    @foreach ($shipings as $shiping)
                         <tr>
-                            <td>{{ $banner->id }}</td>
-                            <td>{{ $banner->titleRu }}</td>
-                            <td>{{ $banner->titleEn }}</td>
+                            <td>{{ $shiping->id }}</td>
+                            <td>{{ $shiping->titleRu }}</td>
+                            <td>{{ $shiping->titleEn }}</td>
                             <td>
-                                <img src="{{ asset('storage/' . $banner->image) }}" alt="Image" width="100">
+                                <img src="{{ asset('storage/' . $shiping->image) }}" alt="Image" width="100">
 
                             </td>
                             <td>
-                                <a href="{{ route('banners.edit', $banner->id) }}"
+                                <a href="{{ route('shipings.edit', $shiping->id) }}"
                                     class="btn btn-warning btn-sm">Խմբագրել</a>
 
-                                <form action="{{ route('banners.destroy', $banner->id) }}" method="POST"
+                                <form action="{{ route('shipings.destroy', $shiping->id) }}" method="POST"
                                     style="display:inline-block;"
                                     onsubmit="return confirm('Վստա՞հ եք, որ ցանկանում եք ջնջել։');">
                                     @csrf

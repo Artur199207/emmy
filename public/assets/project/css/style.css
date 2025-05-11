@@ -11715,7 +11715,7 @@ p.rights a:hover {
 
 .quote-about {
 	position: relative;
-	background: url(../images/fone-farniture.jpg) repeat;
+		background: url('/assets/images/fone-farniture.jpg') repeat;
 	z-index: 999;
 	padding: 70px;
 }

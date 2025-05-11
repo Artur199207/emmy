@@ -25,7 +25,7 @@
           <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-layout"></i>
-                  <div class="text-truncate" data-i18n="Layouts">Layouts</div>
+                  <div class="text-truncate" data-i18n="Layouts">Banner</div>
               </a>
 
               <ul class="menu-sub">
@@ -37,6 +37,26 @@
                   <li class="menu-item">
                       <a href="{{ route('banners.index') }}" class="menu-link">
                           <div class="text-truncate" data-i18n="Blank">Դիտել Banner-ները</div>
+                      </a>
+                  </li>
+
+              </ul>
+          </li>
+          <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-layout"></i>
+                  <div class="text-truncate" data-i18n="Layouts">Shiping</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="{{ route('shipings.create') }}" class="menu-link">
+                          <div class="text-truncate" data-i18n="Blank">Ավելացնել </div>
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="{{ route('shipings.index') }}" class="menu-link">
+                          <div class="text-truncate" data-i18n="Blank">Դիտել </div>
                       </a>
                   </li>
 
