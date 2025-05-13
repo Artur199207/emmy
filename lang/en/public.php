@@ -47,4 +47,10 @@ return
         'Checkout' => 'Checkout',
         'Ourcontacts' => 'Our contacts',
         'Emmypartners' => 'Emmy company is always glad to have new partners.',
+        'product-singl' => 'Single Product',
+        'shop'=> 'Shop',
+        'Categories' => 'Categories',
+        'Weight' => 'Weight',
+        'Box' =>'Box',
+        'cart' => 'Add to cart',
     ];

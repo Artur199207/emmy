@@ -105,7 +105,7 @@
             </div>
             <div class="ch-navbar-nav-wrap">
               <ul class="ch-navbar-nav">
-                <li class="ch-nav-item active"><a class="ch-nav-link" href="index.html">@lang('public.home')</a> </li>
+                <li class="ch-nav-item active"><a class="ch-nav-link" href="{{url('/')}}">@lang('public.home')</a> </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.navigation')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
                     <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="about-us.html">@lang('public.company')</a> </li>

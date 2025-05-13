@@ -107,7 +107,7 @@
                                   <img src="{{ asset('storage/' . $product->image) }}" alt="" width="148"
                                         height="128" /> 
                                       </div>
-                                <h5 class="product-title"><a href="single-product.html"> <p>{!! app()->getLocale() === 'ru' ? $offer->titleRu : $offer->titleEn !!}</p></a></h5>
+                                <h5 class="product-title"><a href=""> <p>{!! app()->getLocale() === 'ru' ? $offer->titleRu : $offer->titleEn !!}</p></a></h5>
                                 <div class="product-price-wrap">
                                     <div class="product-price product-price-old">${{$product->price}}</div>
                                     <div class="product-price">$17.00</div>
@@ -115,12 +115,14 @@
                             </div>
                             <span class="product-badge product-badge-sale">Sale</span>
                             <div class="product-button-wrap">
-                                <div class="product-button"><a
+                                <div class="product-button">
+                                    <a
                                         class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
-                                        href="single-product.html"></a></div>
+                                        href="{{ route('product.show', $product->id) }}"></a>
+                                    </div>
                                 <div class="product-button"><a
                                         class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202"
-                                        href="cart-page.html"></a></div>
+                                        href=""></a></div>
                             </div>
                         </article>
                     </div>

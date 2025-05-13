@@ -5,6 +5,7 @@ use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShipingController;
@@ -15,6 +16,8 @@ Route::get('/', function () {
 
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/locale/{locale}', [LocalizationController::class, 'setLang'])->name('setLang');
+Route::get('/product/{id}', [FrontendController::class, 'showProduct'])->name('product.show');
+
 
 Auth::routes();
 

@@ -15,7 +15,7 @@
           <div class="col-sm-6 col-md-7 col-lg-5 wow fadeInRight" data-wow-delay=".1s">
             <h5 class="footer-modern-title">@lang('public.navigation')</h5>
             <ul class="footer-modern-list footer-modern-list-2 d-sm-inline-block d-md-block">
-              <li><a href="about-us.html">@lang('public.home')</a></li>
+              <li><a href="{{url('/')}}">@lang('public.home')</a></li>
               <li><a href="our-team.html">@lang('public.navigation')</a></li>
               <li><a href="contact-us.html">@lang('public.katalog')</a></li>
               <li><a href="grid-shop.html">@lang('public.Articles')</a></li>
