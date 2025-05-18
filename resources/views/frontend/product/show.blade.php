@@ -1,6 +1,24 @@
 @extends('layouts.app')
 @section('title', 'Эмми Мебель – Современная и качественная мебель для вашего дома')
 @section('content')
+    <style>
+        .form-select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .select-optionOne>span {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-left: 25px;
+            padding: 5px;
+            border: solid 1px;
+            border-radius: 8px;
+        }
+    </style>
 
     <section class="breadcrumbs-custom">
         <div class="parallax-container breadcrumbs_section">
@@ -13,7 +31,7 @@
         <div class="breadcrumbs-custom-footer">
             <div class="container">
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="{{url('/')}}">@lang('public.home')</a></li>
+                    <li><a href="{{ url('/') }}">@lang('public.home')</a></li>
                     <li><a href="grid-shop.html">@lang('public.shop')</a></li>
                     <li class="active">@lang('public.product-singl')</li>
                 </ul>
@@ -76,7 +94,17 @@
                             </li>
                             <li><span>@lang('public.Weight')</span><span>{{ app()->getLocale() === 'ru' ? $product->weigthRu : $product->weigthEn }}</span>
                             </li>
-                            <li><span>@lang('public.Box')</span><span>60 x 60 x 90 cm</span></li>
+                            <li>
+                                <span>@lang('public.Box')</span>
+                                <span class="select-optionOne">
+                                    <select name="size" class="form-select">
+
+                                        @foreach (json_decode($product->sizeRu, true) as $size)
+                                            <option value="{{ $size }}">{{ $size }}</option>
+                                        @endforeach
+                                    </select>
+                                </span>
+                            </li>
                         </ul>
                         <div class="group-xs group-middle">
                             <div class="product-stepper">
@@ -106,11 +134,11 @@
                 <div class="nav-tabs-wrap">
                     <ul class="nav nav-tabs nav-tabs-1">
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-1-1"
-                                data-toggle="tab">Reviews</a></li>
+                                data-toggle="tab">Описание</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2"
-                                data-toggle="tab">Additional information</a></li>
+                                data-toggle="tab">Оплата</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-3"
-                                data-toggle="tab">Delivery and payment</a></li>
+                                data-toggle="tab">Доставка</a></li>
                     </ul>
                 </div>
                 <!-- Tab panes-->
@@ -118,11 +146,12 @@
                     <div class="tab-pane fade show active" id="tabs-1-1">
                         <div class="box-comment">
                             <div class="unit flex-column flex-sm-row unit-spacing-md">
-                                <div class="unit-left"><a class="box-comment-figure" href="#"><img
+                                {{-- <div class="unit-left"><a class="box-comment-figure" href="#"><img
                                             src="images/testimonials/thumb1.jpg" alt="" width="119"
-                                            height="119" /></a></div>
+                                            height="119" /></a>
+                                </div> --}}
                                 <div class="unit-body">
-                                    <div class="group-sm group-justify">
+                                    {{-- <div class="group-sm group-justify">
                                         <div>
                                             <div class="group-xs group-middle">
                                                 <h5 class="box-comment-author"><a href="#">Jane Doe</a></h5>
@@ -136,14 +165,12 @@
                                         <div class="box-comment-time">
                                             <time datetime="2019-11-30">Nov 30, 2019</time>
                                         </div>
-                                    </div>
-                                    <p class="box-comment-text">Lorem ipsum dolor sit amet, has mutat labores nostrum ei.
-                                        Duo te blandit erroribus, ut sea ipsum nonumy, mel no ignota accusamus gloriatur. Id
-                                        has habeo regione, explicari hendrerit reprimique cum te.</p>
+                                    </div> --}}
+                                    <p class="box-comment-text">{!! app()->getLocale() === 'ru' ? $product->informationRu : $product->informationEn !!}</p>
                                 </div>
                             </div>
                         </div>
-                        <h4 class="text-transform-none font-weight-medium">Leave a Review</h4>
+                        {{-- <h4 class="text-transform-none font-weight-medium">Leave a Review</h4> --}}
                         {{-- <form class="ch-form ch-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="#">
                   <div class="row row-20 row-md-30">
                     <div class="col-lg-8">
@@ -190,11 +217,7 @@
                                 <div class="unit-left"><span class="icon icon-80 mdi mdi-information-outline"></span>
                                 </div>
                                 <div class="unit-body">
-                                    <p>Lorem ipsum dolor sit amet, has mutat labores nostrum ei. Duo te blandit erroribus,
-                                        ut sea ipsum nonumy, mel no ignota accusamus gloriatur. Id has habeo regione,
-                                        explicari hendrerit reprimique cum teLorem ipsum dolor sit amet, has mutat labores
-                                        nostrum ei. Duo te blandit erroribus, ut sea ipsum nonumy, mel no ignota accusamus
-                                        gloriatur. Id has habeo regione, explicari hendrerit reprimique cum te</p>
+                                    <p>{!! app()->getLocale() === 'ru' ? $product->payRu : $product->payEn !!}</p>
                                 </div>
                             </div>
                         </div>
@@ -204,11 +227,7 @@
                             <div class="unit unit-spacing-md flex-column flex-sm-row align-items-sm-center">
                                 <div class="unit-left"><span class="icon icon-80 mdi mdi-truck-delivery"></span></div>
                                 <div class="unit-body">
-                                    <p>Lorem ipsum dolor sit amet, has mutat labores nostrum ei. Duo te blandit erroribus,
-                                        ut sea ipsum nonumy, mel no ignota accusamus gloriatur. Id has habeo regione,
-                                        explicari hendrerit reprimique cum teLorem ipsum dolor sit amet, has mutat labores
-                                        nostrum ei. Duo te blandit erroribus, ut sea ipsum nonumy, mel no ignota accusamus
-                                        gloriatur. Id has habeo regione, explicari hendrerit reprimique cum te</p>
+                                    <p>{!! app()->getLocale() === 'ru' ? $product->DeliveryRu : $product->DeliveryEn !!}</p>
                                 </div>
                             </div>
                         </div>
@@ -218,86 +237,47 @@
         </div>
     </section>
     <!-- Related Products-->
-    {{-- <section class="section section-md section-last bg-primary-2">
+    <section class="section section-md section-last bg-primary-2">
         <div class="container">
-          <h4 class="font-weight-sbold">Featured Products</h4>
-          <div class="row row-lg row-30 row-lg-50 justify-content-center">
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Product-->
-              <article class="product">
-                <div class="product-body">
-                  <div class="product-figure"><img src="images/shop/shop-1.png" alt="" width="220" height="160"/>
-                  </div>
-                  <h5 class="product-title"><a href="single-product.html">Lorem ipsum dolor</a></h5>
-                  <div class="product-price-wrap">
-                    <div class="product-price product-price-old">$30.00</div>
-                    <div class="product-price">$17.00</div>
-                  </div>
-                </div><span class="product-badge product-badge-sale">Sale</span>
-                <div class="product-button-wrap">
-                  <div class="product-button"><a class="button button-gray-14 button-zakaria fl-bigmug-line-search74" href="single-product.html"></a></div>
-                  <div class="product-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202" href="cart-page.html"></a></div>
-                </div>
-              </article>
+            <h4 class="font-weight-sbold">Рекомендуемые продукты</h4>
+            <div class="row row-lg row-30 row-lg-50 justify-content-center">
+                @foreach ($products->take(4 ) as $product)
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <!-- Product-->
+                        <article class="product wow fadeInRight">
+                            <div class="product-body">
+                                <div class="product-figure">
+                                  <img src="{{ asset('storage/' . $product->image) }}" alt="" width="148"
+                                        height="128" /> 
+                                      </div>
+                                <h5 class="product-title"><a href=""> <p>{!! app()->getLocale() === 'ru' ? $product->titleRu : $product->titleEn !!}</p></a></h5>
+                                <div class="product-price-wrap">
+                                    <div class="product-price product-price-old">${{$product->price}}</div>
+                                    <div class="product-price">$17.00</div>
+                                </div>
+                            </div>
+                            <span class="product-badge product-badge-sale">Sale</span>
+                            <div class="product-button-wrap">
+                                <div class="product-button">
+                                    <a
+                                        class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
+                                        href="{{ route('product.show', $product->id) }}"></a>
+                                    </div>
+                                <div class="product-button"><a
+                                        class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202"
+                                        href=""></a></div>
+                            </div>
+                        </article>
+                    </div>
+                   @endforeach
+
             </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Product-->
-              <article class="product">
-                <div class="product-body">
-                  <div class="product-figure"><img src="images/shop/shop-3.png" alt="" width="128" height="220"/>
-                  </div>
-                  <h5 class="product-title"><a href="single-product.html">Lorem ipsum dolor</a></h5>
-                  <div class="product-price-wrap">
-                    <div class="product-price">$13.00</div>
-                  </div>
-                </div>
-                <div class="product-button-wrap">
-                  <div class="product-button"><a class="button button-gray-14 button-zakaria fl-bigmug-line-search74" href="single-product.html"></a></div>
-                  <div class="product-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202" href="cart-page.html"></a></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Product-->
-              <article class="product">
-                <div class="product-body">
-                  <div class="product-figure"><img src="images/shop/shop-5.png" alt="" width="145" height="163"/>
-                  </div>
-                  <h5 class="product-title"><a href="single-product.html">Lorem ipsum dolor</a></h5>
-                  <div class="product-price-wrap">
-                    <div class="product-price">$17.00</div>
-                  </div>
-                </div>
-                <div class="product-button-wrap">
-                  <div class="product-button"><a class="button button-gray-14 button-zakaria fl-bigmug-line-search74" href="single-product.html"></a></div>
-                  <div class="product-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202" href="cart-page.html"></a></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-              <!-- Product-->
-              <article class="product">
-                <div class="product-body">
-                  <div class="product-figure"><img src="images/shop/shop-7.png" alt="" width="117" height="131"/>
-                  </div>
-                  <h5 class="product-title"><a href="single-product.html">Lorem ipsum dolor</a></h5>
-                  <div class="product-price-wrap">
-                    <div class="product-price">$11.00</div>
-                  </div>
-                </div>
-                <div class="product-button-wrap">
-                  <div class="product-button"><a class="button button-gray-14 button-zakaria fl-bigmug-line-search74" href="single-product.html"></a></div>
-                  <div class="product-button"><a class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202" href="cart-page.html"></a></div>
-                </div>
-              </article>
-            </div>
-          </div>
         </div>
-      </section> --}}
+    </section>
 
 
     <!-- Our brand-->
-    {{-- <section class="section section-md bg-default brannddlogo">
+    <section class="section section-md bg-default brannddlogo">
     <div class="container"> 
       <!-- Owl Carousel-->
       <div class="owl-carousel" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5" data-margin="30" data-dots="true" data-autoplay="true">
@@ -359,7 +339,8 @@
           </a> </article>
       </div>
     </div>
-  </section> --}}
+  </section>
+
 
 
 @endsection

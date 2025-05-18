@@ -98,37 +98,343 @@
             <div class="container">
                 <h2 class="text-transform-capitalize wow fadeScale">Our Products</h2>
                 <div class="row row-lg row-30 row-lg-30">
-                   @foreach ($products->take(8) as $product)
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <!-- Product-->
-                        <article class="product wow fadeInRight">
-                            <div class="product-body">
-                                <div class="product-figure">
-                                  <img src="{{ asset('storage/' . $product->image) }}" alt="" width="148"
-                                        height="128" /> 
-                                      </div>
-                                <h5 class="product-title"><a href=""> <p>{!! app()->getLocale() === 'ru' ? $offer->titleRu : $offer->titleEn !!}</p></a></h5>
-                                <div class="product-price-wrap">
-                                    <div class="product-price product-price-old">${{$product->price}}</div>
-                                    <div class="product-price">$17.00</div>
-                                </div>
-                            </div>
-                            <span class="product-badge product-badge-sale">Sale</span>
-                            <div class="product-button-wrap">
-                                <div class="product-button">
-                                    <a
-                                        class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
-                                        href="{{ route('product.show', $product->id) }}"></a>
+                    @foreach ($products->take(8) as $product)
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <!-- Product-->
+                            <article class="product wow fadeInRight">
+                                <div class="product-body">
+                                    <div class="product-figure">
+                                        <img src="{{ asset('storage/' . $product->image) }}" alt="" width="148"
+                                            height="128" />
                                     </div>
-                                <div class="product-button"><a
-                                        class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202"
-                                        href=""></a></div>
-                            </div>
-                        </article>
-                    </div>
-                   @endforeach
+                                    <h5 class="product-title"><a href="">
+                                            <p>{!! app()->getLocale() === 'ru' ? $offer->titleRu : $offer->titleEn !!}</p>
+                                        </a></h5>
+                                    <div class="product-price-wrap">
+                                        <div class="product-price product-price-old">${{ $product->price }}</div>
+                                        <div class="product-price">$17.00</div>
+                                    </div>
+                                </div>
+                                <span class="product-badge product-badge-sale">Sale</span>
+                                <div class="product-button-wrap">
+                                    <div class="product-button">
+                                        <a class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
+                                            href="{{ route('product.show', $product->id) }}"></a>
+                                    </div>
+                                    <div class="product-button"><a
+                                            class="button button-primary-2 button-zakaria fl-bigmug-line-shopping202"
+                                            href=""></a></div>
+                                </div>
+                            </article>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>
+        <section class="section bg-brown-1 call_section_1">
+            <div class="parallax-content section-md context-dark">
+                <div class="container">
+                    <h3 class="text-spacing-100">Летняя распродажа </h3>
+                    <h6 class="font-weight-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem
+                        Ipsum has been the dummy text ever since</h6>
+                    <a class="button button-sm button-shadow-2 button-primary button-zakaria" href="#">Shop Now</a>
+                </div>
+            </div>
+        </section>
+        <section class="section section-md bg-default">
+            <div class="container">
+                <h2 class="text-transform-capitalize wow fadeScale">Gallery</h2>
+                <div class="isotope-wrap">
+                    <div class="row row-30 isotope isotope-custom-1" data-lightgallery="group">
+                        <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-1.jpg"
+                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">macarons</a></h5>
+                                        <div class="thumbnail-classic-price">$8.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-1.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-1.jpg"
+                                                        alt="" width="270" height="250" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-2.jpg"
+                                        alt="" width="270" height="530" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Biscuits</a>
+                                        </h5>
+                                        <div class="thumbnail-classic-price">$12.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-2.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-2.jpg"
+                                                        alt="" width="270" height="530" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-3.jpg"
+                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a
+                                                href="single-product.html">CupFurnitures</a></h5>
+                                        <div class="thumbnail-classic-price">$10.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-3.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-3.jpg"
+                                                        alt="" width="270" height="250" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-4.jpg"
+                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Birthday
+                                                Furnitures</a></h5>
+                                        <div class="thumbnail-classic-price">$13.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-4.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-4.jpg"
+                                                        alt="" width="270" height="250" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-5.jpg"
+                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Custom
+                                                Furnitures</a></h5>
+                                        <div class="thumbnail-classic-price">$14.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-5.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-5.jpg"
+                                                        alt="" width="270" height="250" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-6 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-6.jpg"
+                                        alt="" width="570" height="530" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Wedding
+                                                Furnitures</a></h5>
+                                        <div class="thumbnail-classic-price">$16.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-6.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-6.jpg"
+                                                        alt="" width="570" height="530" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-8 col-xl-6 isotope-item">
+                            <!-- Thumbnail Classic-->
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-7.jpg"
+                                        alt="" width="570" height="250" /> </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Pies</a></h5>
+                                        <div class="thumbnail-classic-price">$10.99</div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="images/masonry-gallery/image-7.jpg"
+                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-7.jpg"
+                                                        alt="" width="570" height="250" /></a></div>
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
+                                                    href="cart-page.html"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-md bg-primary-2">
+            <div class="container">
+                <h2 class="text-transform-capitalize wow fadeScale">Our Blog</h2>
+                <!-- Owl Carousel-->
+                <div class="owl-carousel" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30"
+                    data-dots="true" data-mouse-drag="false">
+                    <!-- Post Classic-->
+                    <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure"
+                            href="blog-post.html"><img src="images/blog/blog-home-1.jpg" alt="" /></a>
+                        <div class="post-classic-content">
+                            <div class="post-classic-time">
+                                <time datetime="2019-08-09">August 9, 2023</time>
+                            </div>
+                            <h4 class="post-classic-title"><a href="blog-post.html">Lorem Ipsum is simply dummy
+                                    printing</a></h4>
+                            <p class="post-classic-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco
+                                nisi.</p>
+                        </div>
+                    </article>
+                    <!-- Post Classic-->
+                    <article class="post post-classic box-md wow slideInUp"><a class="post-classic-figure"
+                            href="blog-post.html"><img src="images/blog/blog-home-2.jpg" alt="" /></a>
+                        <div class="post-classic-content">
+                            <div class="post-classic-time">
+                                <time datetime="2019-08-09">August 9, 2023</time>
+                            </div>
+                            <h4 class="post-classic-title"><a href="blog-post.html">Lorem Ipsum is Simply</a></h4>
+                            <p class="post-classic-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. has
+                                been the dummy text ever since the 1500s...</p>
+                        </div>
+                    </article>
+                    <!-- Post Classic-->
+                    <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure"
+                            href="blog-post.html"><img src="images/blog/blog-home-3.jpg" alt="" /></a>
+                        <div class="post-classic-content">
+                            <div class="post-classic-time">
+                                <time datetime="2019-08-09">August 9, 2023</time>
+                            </div>
+                            <h4 class="post-classic-title"><a href="blog-post.html">Lorem Ipsum is simply dummy
+                                    printing</a></h4>
+                            <p class="post-classic-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco
+                                nisi.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section section-md bg-default brannddlogo">
+    <div class="container">
+      <!-- Owl Carousel-->
+      <div class="owl-carousel" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5" data-margin="30"
+        data-dots="true" data-autoplay="true">
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+        <article class=" box-md"> <a class="" href="#">
+            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+              <figcaption>
+                <h5>Emmy</h5>
+              </figcaption>
+            </figure>
+          </a> </article>
+      </div>
+    </div>
+  </section>
+
     </main>
 @endsection

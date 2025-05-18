@@ -51,7 +51,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::delete('/offers/{shiping}', [OfferController::class, 'destroy'])->name('offers.destroy');
 
 
-       Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
     Route::post('/products', [ProductController::class, 'store'])->name('products.store');
     Route::get('/products/{shiping}/edit', [ProductController::class, 'edit'])->name('products.edit');
