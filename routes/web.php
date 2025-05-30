@@ -5,6 +5,7 @@ use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ProductController;
@@ -57,4 +58,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/products/{shiping}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::put('/products/{shiping}', [ProductController::class, 'update'])->name('products.update');
     Route::delete('/products/{shiping}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+
+    Route::get('/blog',[BlogController::class,'index'])->name('blog.index');
+
 });
