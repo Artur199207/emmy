@@ -15,7 +15,7 @@
             </div>
         @endif
 
-        {{-- <a href="{{ route('blog.create') }}" class="btn btn-primary mb-3 hovcolor">Добавить новый элемент</a> --}}
+        <a href="{{ route('blog.create') }}" class="btn btn-primary mb-3 hovcolor">Добавить новый элемент</a>
         <a href="{{ url('admin/dashboard') }}" class="btn btn-primary mb-3 hovcolor">🔙 Вернуться к панели инструментов</a>
         @if ($blog->count())
             <table class="table table-bordered">
@@ -42,7 +42,7 @@
                                 <a href="{{ route('blog.edit', $blogs->id) }}"
                                     class="btn btn-warning btn-sm">Редактировать</a>
 
-                                <form action="{{ route('banners.destroy', $blogs->id) }}" method="POST"
+                                <form action="{{ route('blog.destroy', $blogs->id) }}" method="POST"
                                     style="display:inline-block;"
                                     onsubmit="return confirm('Вы уверены, что хотите удалить?');">
                                     @csrf

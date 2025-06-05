@@ -323,118 +323,90 @@
                 <!-- Owl Carousel-->
                 <div class="owl-carousel" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30"
                     data-dots="true" data-mouse-drag="false">
-                    <!-- Post Classic-->
-                    <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure"
-                            href="blog-post.html"><img src="images/blog/blog-home-1.jpg" alt="" /></a>
-                        <div class="post-classic-content">
-                            <div class="post-classic-time">
-                                <time datetime="2019-08-09">August 9, 2023</time>
+                    @foreach ($blog->take(3) as $blogs)
+                        <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure"
+                                href="{{ route('blog.show', $blogs->id) }}"><img src="{{ asset('storage/' . $blogs->image) }}"
+                                    alt="" /></a>
+                            <div class="post-classic-content">
+                                <div class="post-classic-time">
+                                    <time
+                                        datetime="2019-08-09">{{ app()->getLocale() === 'ru' ? $blogs->dataRu : $blogs->dataEn }}</time>
+                                </div>
+                                <h4 class="post-classic-title"><a
+                                        href="{{ route('blog.show', $blogs->id) }}">{{ app()->getLocale() === 'ru' ? $blogs->titleRu : $blogs->titleEn }}</a>
+                                </h4>
+                                <p class="post-classic-text">
+                                    {{ app()->getLocale() === 'ru' ? $blogs->descriptionRu : $blogs->descriptionEn }}</p>
                             </div>
-                            <h4 class="post-classic-title"><a href="blog-post.html">Lorem Ipsum is simply dummy
-                                    printing</a></h4>
-                            <p class="post-classic-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco
-                                nisi.</p>
-                        </div>
-                    </article>
-                    <!-- Post Classic-->
-                    <article class="post post-classic box-md wow slideInUp"><a class="post-classic-figure"
-                            href="blog-post.html"><img src="images/blog/blog-home-2.jpg" alt="" /></a>
-                        <div class="post-classic-content">
-                            <div class="post-classic-time">
-                                <time datetime="2019-08-09">August 9, 2023</time>
-                            </div>
-                            <h4 class="post-classic-title"><a href="blog-post.html">Lorem Ipsum is Simply</a></h4>
-                            <p class="post-classic-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. has
-                                been the dummy text ever since the 1500s...</p>
-                        </div>
-                    </article>
-                    <!-- Post Classic-->
-                    <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure"
-                            href="blog-post.html"><img src="images/blog/blog-home-3.jpg" alt="" /></a>
-                        <div class="post-classic-content">
-                            <div class="post-classic-time">
-                                <time datetime="2019-08-09">August 9, 2023</time>
-                            </div>
-                            <h4 class="post-classic-title"><a href="blog-post.html">Lorem Ipsum is simply dummy
-                                    printing</a></h4>
-                            <p class="post-classic-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco
-                                nisi.</p>
-                        </div>
-                    </article>
+                        </article>
+                    @endforeach
                 </div>
             </div>
         </section>
         <section class="section section-md bg-default brannddlogo">
-    <div class="container">
-      <!-- Owl Carousel-->
-      <div class="owl-carousel" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5" data-margin="30"
-        data-dots="true" data-autoplay="true">
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-        <article class=" box-md"> <a class="" href="#">
-            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
-              <figcaption>
-                <h5>Emmy</h5>
-              </figcaption>
-            </figure>
-          </a> </article>
-      </div>
-    </div>
-  </section>
+            <div class="container">
+                <!-- Owl Carousel-->
+                <div class="owl-carousel" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5"
+                    data-margin="30" data-dots="true" data-autoplay="true">
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                    <article class=" box-md"> <a class="" href="#">
+                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                                <figcaption>
+                                    <h5>Emmy</h5>
+                                </figcaption>
+                            </figure>
+                        </a> </article>
+                </div>
+            </div>
+        </section>
 
     </main>
 @endsection

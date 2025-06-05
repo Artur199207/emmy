@@ -117,7 +117,7 @@
 
                      <ul class="menu-sub">
                          <li class="menu-item">
-                             <a href="" class="menu-link">
+                             <a href="{{ route('blog.create') }}" class="menu-link">
                                  <div class="text-truncate" data-i18n="Blank">Добавить </div>
                              </a>
                          </li>

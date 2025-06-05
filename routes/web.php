@@ -18,6 +18,11 @@ Route::get('/', function () {
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/locale/{locale}', [LocalizationController::class, 'setLang'])->name('setLang');
 Route::get('/product/{id}', [FrontendController::class, 'showProduct'])->name('product.show');
+Route::get('/showblog/{id}', [FrontendController::class, 'showblog'])->name('blog.show');
+
+
+
+
 
 
 Auth::routes();
@@ -61,5 +66,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
 
     Route::get('/blog',[BlogController::class,'index'])->name('blog.index');
+    Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+    Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
+    Route::get('/blog/{shiping}/edit', [BlogController::class, 'edit'])->name('blog.edit');
+    Route::put('/blog/{shiping}', [BlogController::class, 'update'])->name('blog.update');
+    Route::delete('/blog/{shiping}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 });
