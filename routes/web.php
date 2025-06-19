@@ -5,6 +5,7 @@ use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\BathController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\OfferController;
@@ -71,5 +72,13 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/blog/{shiping}/edit', [BlogController::class, 'edit'])->name('blog.edit');
     Route::put('/blog/{shiping}', [BlogController::class, 'update'])->name('blog.update');
     Route::delete('/blog/{shiping}', [BlogController::class, 'destroy'])->name('blog.destroy');
+
+
+    Route::get('/bath',[BathController::class,'index'])->name('bath.index');
+    Route::get('/bath/create', [BathController::class, 'create'])->name('bath.create');
+    Route::post('/bath', [BathController::class, 'store'])->name('bath.store');
+    Route::get('/bath/{shiping}/edit', [BathController::class, 'edit'])->name('bath.edit');
+    Route::put('/bath/{shiping}', [BathController::class, 'update'])->name('bath.update');
+    Route::delete('/bath/{shiping}', [BathController::class, 'destroy'])->name('bath.destroy');
 
 });

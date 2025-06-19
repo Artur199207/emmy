@@ -144,27 +144,29 @@
         </section>
         <section class="section section-md bg-default">
             <div class="container">
-                <h2 class="text-transform-capitalize wow fadeScale">Gallery</h2>
+                <h2 class="text-transform-capitalize wow fadeScale">@lang('public.Gallery')</h2>
                 <div class="isotope-wrap">
                     <div class="row row-30 isotope isotope-custom-1" data-lightgallery="group">
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-1.jpg"
+                                <div class="thumbnail-classic-figure"><img src=""
                                         alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">macarons</a></h5>
-                                        <div class="thumbnail-classic-price">$8.99</div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Экраны под ванну</a></h5>
+                                        {{-- <div class="thumbnail-classic-price">$8.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-1.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-1.jpg"
-                                                        alt="" width="270" height="250" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
+                                                    href="" data-lightgallery="item">
+                                                    <img src=""" alt=""
+                                                        width="270" height="250" />
+                                                </a>
+                                            </div>
+                                            {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                                    href="cart-page.html"></a></div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -173,22 +175,22 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-2.jpg"
+                                <div class="thumbnail-classic-figure"><img src=""
                                         alt="" width="270" height="530" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Biscuits</a>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">пеналы </a>
                                         </h5>
-                                        <div class="thumbnail-classic-price">$12.99</div>
+                                        {{-- <div class="thumbnail-classic-price">$12.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-2.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-2.jpg"
+                                                    data-lightgallery="item"><img src=""
                                                         alt="" width="270" height="530" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
+                                            {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                                    href="cart-page.html"></a></div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -197,22 +199,22 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-3.jpg"
+                                <div class="thumbnail-classic-figure"><img src=""
                                         alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a
-                                                href="single-product.html">CupFurnitures</a></h5>
-                                        <div class="thumbnail-classic-price">$10.99</div>
+                                                href="single-product.html">Навесные шкафы</a></h5>
+                                        {{-- <div class="thumbnail-classic-price">$10.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-3.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-3.jpg"
+                                                    data-lightgallery="item"><img src=""
                                                         alt="" width="270" height="250" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
+                                            {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                                    href="cart-page.html"></a></div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -221,22 +223,22 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-4.jpg"
+                                <div class="thumbnail-classic-figure"><img src=""
                                         alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Birthday
-                                                Furnitures</a></h5>
-                                        <div class="thumbnail-classic-price">$13.99</div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">
+                                                Тумбы с раковинами</a></h5>
+                                        {{-- <div class="thumbnail-classic-price">$13.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-4.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-4.jpg"
+                                                    data-lightgallery="item"><img src=""
                                                         alt="" width="270" height="250" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
+                                            {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                                    href="cart-page.html"></a></div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -325,8 +327,8 @@
                     data-dots="true" data-mouse-drag="false">
                     @foreach ($blog->take(3) as $blogs)
                         <article class="post post-classic box-md wow slideInDown"><a class="post-classic-figure"
-                                href="{{ route('blog.show', $blogs->id) }}"><img src="{{ asset('storage/' . $blogs->image) }}"
-                                    alt="" /></a>
+                                href="{{ route('blog.show', $blogs->id) }}"><img
+                                    src="{{ asset('storage/' . $blogs->image) }}" alt="" /></a>
                             <div class="post-classic-content">
                                 <div class="post-classic-time">
                                     <time
