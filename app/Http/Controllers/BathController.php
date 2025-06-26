@@ -100,6 +100,8 @@ public function edit($id)
         return redirect()->route('bath.index')->with('success', 'Элемент успешно удалён.');
     }
 
+   
+
 
 
 }

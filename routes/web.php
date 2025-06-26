@@ -20,10 +20,12 @@ Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'inde
 Route::get('/locale/{locale}', [LocalizationController::class, 'setLang'])->name('setLang');
 Route::get('/product/{id}', [FrontendController::class, 'showProduct'])->name('product.show');
 Route::get('/showblog/{id}', [FrontendController::class, 'showblog'])->name('blog.show');
+Route::get('/bath', function () {
+    return view('frontend.bath');
+})->name('bath');
 
-
-
-
+Route::get('/bath', [FrontendController::class, 'showBath'])->name('bath');
+Route::get('/bath/{id}', [FrontendController::class, 'showBathSingle'])->name('bath.single');
 
 
 Auth::routes();

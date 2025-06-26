@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\BannerModel;
+use App\Models\Bath;
 use App\Models\Blog;
 use App\Models\Offer;
 use App\Models\Product;
@@ -32,4 +33,14 @@ class FrontendController extends Controller
         $blog = Blog::findOrFail($id);
         return view('frontend.blog.show', compact('blog'));
     }
+    public function showBath()
+{
+    $baths = Bath::all(); 
+    return view('frontend.bath', compact('baths'));
+}
+public function showBathSingle($id)
+{
+    $bath = Bath::findOrFail($id);
+    return view('frontend.bath-single', compact('bath'));
+}
 }

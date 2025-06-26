@@ -154,7 +154,7 @@
                                         alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Экраны под ванну</a></h5>
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('bath') }}">Экраны под ванну</a></h5>
                                         {{-- <div class="thumbnail-classic-price">$8.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
