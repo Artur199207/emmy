@@ -9,6 +9,7 @@ use App\Http\Controllers\BathController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\OfferController;
+use App\Http\Controllers\PencilController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShipingController;
 
@@ -23,9 +24,14 @@ Route::get('/showblog/{id}', [FrontendController::class, 'showblog'])->name('blo
 Route::get('/bath', function () {
     return view('frontend.bath');
 })->name('bath');
+Route::get('/pencil', function () {
+    return view('frontend.pencil');
+})->name('pencil');
+Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
 
 Route::get('/bath', [FrontendController::class, 'showBath'])->name('bath');
 Route::get('/bath/{id}', [FrontendController::class, 'showBathSingle'])->name('bath.single');
+Route::get('/pencil/{id}', [FrontendController::class, 'showPencilSingle'])->name('pencil.single');
 
 
 Auth::routes();
@@ -82,5 +88,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/bath/{shiping}/edit', [BathController::class, 'edit'])->name('bath.edit');
     Route::put('/bath/{shiping}', [BathController::class, 'update'])->name('bath.update');
     Route::delete('/bath/{shiping}', [BathController::class, 'destroy'])->name('bath.destroy');
+
+    Route::get('/pencil',[PencilController::class,'index'])->name('pencil.index');
+    Route::get('/pencil/create', [PencilController::class, 'create'])->name('pencil.create');
+    Route::post('/pencil', [PencilController::class, 'store'])->name('pencil.store');
+    Route::get('/pencil/{shiping}/edit', [PencilController::class, 'edit'])->name('pencil.edit');
+    Route::put('/pencil/{shiping}', [PencilController::class, 'update'])->name('pencil.update');
+    Route::delete('/pencil/{shiping}', [PencilController::class, 'destroy'])->name('pencil.destroy');
 
 });

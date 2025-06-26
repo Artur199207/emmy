@@ -18,6 +18,23 @@
             border: solid 1px;
             border-radius: 8px;
         }
+
+        .content-formPlus {
+            display: flex !important;
+            justify-content: space-between;
+            align-content: center;
+            gap: 35px;
+            max-width: 250px;
+            width: 100%;
+            margin-block: 25px;
+        }
+        .content-info{
+            display: flex !important;
+            flex-direction: column;
+            margin-block: 25px;
+            gap: 25px;
+
+        }
     </style>
 
     <section class="breadcrumbs-custom">
@@ -32,7 +49,7 @@
             <div class="container">
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ url('/') }}">@lang('public.home')</a></li>
-                    <li><a href="{{ route('bath') }}">@lang('public.shop')</a></li>
+                    <li><a href="{{ route('pencil') }}">@lang('public.shop')</a></li>
                     <li class="active">@lang('public.product-singl')</li>
                 </ul>
             </div>
@@ -50,7 +67,7 @@
                         <!-- Slick Carousel-->
                         <div class="slick-slider carousel-parent" id="carousel-parent" data-items="1" data-swipe="true"
                             data-child="#child-carousel" data-for="#child-carousel">
-                            @foreach (json_decode($bath->images, true) as $image)
+                            @foreach (json_decode($pencil->images, true) as $image)
                                 <div class="item">
                                     <div class="slick-product-figure">
                                         <img src="{{ asset('storage/' . $image) }}" alt="" width="530"
@@ -63,7 +80,7 @@
                         <div class="slick-slider child-carousel slick-nav-1" id="child-carousel" data-arrows="true"
                             data-items="3" data-sm-items="3" data-md-items="3" data-lg-items="3" data-xl-items="3"
                             data-xxl-items="3" data-md-vertical="true" data-for="#carousel-parent">
-                            @foreach (json_decode($bath->images, true) as $image)
+                            @foreach (json_decode($pencil->images, true) as $image)
                                 <div class="item">
                                     <div class="slick-product-figure">
                                         <img src="{{ asset('storage/' . $image) }}" alt="" width="530"
@@ -79,33 +96,61 @@
                 <div class="col-lg-6">
                     <div class="single-product">
                         <h6>
-  {{ $bath->available === 1 ? 'Есть в наличии' : ($bath->available === 0 ? 'Нет в наличии' : 'Данных нет') }}
-</h6>
+                            {{ $pencil->available === 1 ? 'Есть в наличии' : ($pencil->available === 0 ? 'Нет в наличии' : 'Данных нет') }}
+                        </h6>
 
-                        <h3 class="text-transform-none font-weight-medium">{!! app()->getLocale() === 'ru' ? $bath->spaceNameRu : $bath->spaceNameEn !!}</h3>
+                        <h3 class="text-transform-none font-weight-medium">{!! app()->getLocale() === 'ru' ? $pencil->spaceNameRu : $pencil->spaceNameEn !!}</h3>
                         <div class="group-md group-middle">
-                            <div class="single-product-price">{{ $bath->priceRu }}</div>
-                         
+                            <div class="single-product-price">{{ $pencil->priceRu }}</div>
+
                         </div>
-                        <p>{!! app()->getLocale() === 'ru' ? $bath->descriptionRu : $bath->descriptionEn !!}</p>
+                        <p>{!! app()->getLocale() === 'ru' ? $pencil->descriptionRu : $pencil->descriptionEn !!}</p>
                         <hr class="hr-gray-100">
-                            <p>{!! app()->getLocale() === 'ru' ? $bath->articleRu : $bath->articleEn !!}</p>
+                        <p>{!! app()->getLocale() === 'ru' ? $pencil->articleRu : $pencil->articleEn !!}</p>
                         <ul class="list list-description">
                             <li>
                                 <span>guyn</span>
                                 <span style="display: flex; gap: 10px; flex-wrap: wrap;margin-top:20px;margin-bottom:25px;">
-                                    @foreach (json_decode($bath->color, true) as $color)
+                                    @foreach (json_decode($pencil->color, true) as $color)
                                         <span
                                             style="width: 30px; height: 30px; background-color: {{ $color }}; border: 1px solid #000; border-radius: 4px;"></span>
                                     @endforeach
                                 </span>
                             </li>
                             <li>
+                                <div class="content-formPlus">
+                                    <span>Форма</span>
+                                    <span>
+                                        @if (($pencil->shape1 ?? false) && ($pencil->shape2 ?? false))
+                                            <h6>Право, Лево</h6>
+                                        @elseif($pencil->shape1 ?? false)
+                                            <h6>Право</h6>
+                                        @elseif($pencil->shape2 ?? false)
+                                            <h6>Лево</h6>
+                                        @endif
+                                    </span>
+                                </div>
+
+
+
+                            </li>
+                            <li>
+                                <div class="content-info">
+                                    <span>
+                                        Примечание
+                                    </span>
+                                    <span>
+                                        {{ app()->getLocale() === 'ru' ? $pencil->annotationRu : $pencil->annotationEn }}
+                                    </span>
+                                </div>
+
+                            </li>
+                            <li>
                                 <span>@lang('public.Box')</span>
                                 <span class="select-optionOne">
                                     <select name="size" class="form-select">
 
-                                        @foreach (json_decode($bath->sizeRu, true) as $size)
+                                        @foreach (json_decode($pencil->sizeRu, true) as $size)
                                             <option value="{{ $size }}">{{ $size }}</option>
                                         @endforeach
                                     </select>
@@ -152,14 +197,14 @@
                     <div class="tab-pane fade show active" id="tabs-1-1">
                         <div class="box-comment">
                             <div class="unit flex-column flex-sm-row unit-spacing-md">
-                                
+
                                 <div class="unit-body">
-                                    
-                                    <p class="box-comment-text">{!! app()->getLocale() === 'ru' ? $bath->informationRu : $bath->informationEn !!}</p>
+
+                                    <p class="box-comment-text">{!! app()->getLocale() === 'ru' ? $pencil->informationRu : $pencil->informationEn !!}</p>
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <div class="tab-pane fade" id="tabs-1-2">
                         <div class="single-product-info">
@@ -167,7 +212,7 @@
                                 <div class="unit-left"><span class="icon icon-80 mdi mdi-information-outline"></span>
                                 </div>
                                 <div class="unit-body">
-                                    <p>{!! app()->getLocale() === 'ru' ? $bath->payRu : $bath->payEn !!}</p>
+                                    <p>{!! app()->getLocale() === 'ru' ? $pencil->payRu : $pencil->payEn !!}</p>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +222,7 @@
                             <div class="unit unit-spacing-md flex-column flex-sm-row align-items-sm-center">
                                 <div class="unit-left"><span class="icon icon-80 mdi mdi-truck-delivery"></span></div>
                                 <div class="unit-body">
-                                    <p>{!! app()->getLocale() === 'ru' ? $bath->DeliveryRu : $bath->DeliveryEn !!}</p>
+                                    <p>{!! app()->getLocale() === 'ru' ? $pencil->DeliveryRu : $pencil->DeliveryEn !!}</p>
                                 </div>
                             </div>
                         </div>

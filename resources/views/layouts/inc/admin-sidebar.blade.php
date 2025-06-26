@@ -130,7 +130,7 @@
                      </ul>
                  </li>
 
-                    <li class="menu-item">
+                 <li class="menu-item">
                      <a href="javascript:void(0);" class="menu-link menu-toggle">
                          <i class="menu-icon tf-icons bx bx-layout"></i>
                          <div class="text-truncate" data-i18n="Layouts">Экраны под ванну</div>
@@ -144,6 +144,26 @@
                          </li>
                          <li class="menu-item">
                              <a href="{{ route('bath.index') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Просматривать </div>
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
+                 <li class="menu-item">
+                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                         <i class="menu-icon tf-icons bx bx-layout"></i>
+                         <div class="text-truncate" data-i18n="Layouts">Пенал</div>
+                     </a>
+
+                     <ul class="menu-sub">
+                         <li class="menu-item">
+                             <a href="{{ route('pencil.create') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Добавить </div>
+                             </a>
+                         </li>
+                         <li class="menu-item">
+                             <a href="{{ route('pencil.index') }}" class="menu-link">
                                  <div class="text-truncate" data-i18n="Blank">Просматривать </div>
                              </a>
                          </li>

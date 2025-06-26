@@ -179,7 +179,7 @@
                                         alt="" width="270" height="530" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">пеналы </a>
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('pencil') }}">пеналы </a>
                                         </h5>
                                         {{-- <div class="thumbnail-classic-price">$12.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">

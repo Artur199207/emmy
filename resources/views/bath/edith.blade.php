@@ -77,9 +77,9 @@
             {{-- Gallery --}}
             <div class="mb-3">
                 <label class="form-action">Галерея:</label><br>
-             @foreach (json_decode($bath->images, true) ?? [] as $img)
-    <img src="{{ asset('storage/' . $img) }}" width="100">
-@endforeach
+                @foreach (json_decode($bath->images, true) ?? [] as $img)
+                    <img src="{{ asset('storage/' . $img) }}" width="100">
+                @endforeach
 
 
                 <input type="file" name="images[]" class="form-control mt-2" multiple>
@@ -109,12 +109,13 @@
             <div class="form-group form-action">
                 <label><strong>Цвета</strong></label><br>
                 <div id="colorInputs">
-                  @foreach (json_decode($bath->color, true) ?? [] as $color)
-    <div class="color-input-row mb-2">
-        <input type="color" name="color[]" value="{{ $color }}">
-        <button type="button" onclick="removeColorInput(this)" class="btn btn-sm btn-danger">Удалить</button>
-    </div>
-@endforeach
+                    @foreach (json_decode($bath->color, true) ?? [] as $color)
+                        <div class="color-input-row mb-2">
+                            <input type="color" name="color[]" value="{{ $color }}">
+                            <button type="button" onclick="removeColorInput(this)"
+                                class="btn btn-sm btn-danger">Удалить</button>
+                        </div>
+                    @endforeach
 
                 </div>
                 <button type="button" onclick="addColorInput()" class="btn btn-sm btn-primary mt-2">➕ Добавить
@@ -129,9 +130,9 @@
                     <button type="button" class="btn btn-success" onclick="addNewSize()">+</button>
                 </div>
                 <select name="sizeRu[]" id="size-select" class="form-select mt-2" multiple>
-                   @foreach (json_decode($bath->sizeRu, true) ?? [] as $size)
-    <option value="{{ $size }}" selected>{{ $size }}</option>
-@endforeach
+                    @foreach (json_decode($bath->sizeRu, true) ?? [] as $size)
+                        <option value="{{ $size }}" selected>{{ $size }}</option>
+                    @endforeach
 
                 </select>
             </div>

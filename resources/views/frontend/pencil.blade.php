@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('title', 'Эмми Мебель – Современная и качественная мебель для вашего дома')
 @section('content')
-<style>
-    .price-none{
-        text-decoration: none !important;
-    }
-</style>
+    <style>
+        .price-none {
+            text-decoration: none !important;
+        }
+    </style>
     <section class="breadcrumbs-custom">
         <div class="parallax-container breadcrumbs_section">
             <div class="breadcrumbs-custom-body parallax-content context-dark">
                 <div class="container">
-                    <h1 class="breadcrumbs-custom-title">Экраны под ванну</h1>
+                    <h1 class="breadcrumbs-custom-title">Пенал</h1>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div class="container">
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ url('/') }}">@lang('public.home')</a></li>
-                    <li class="active">Экраны под ванну</li>
+                    <li class="active">Пенал</li>
                 </ul>
             </div>
         </div>
@@ -28,40 +28,40 @@
         <div class="container">
             <div class="row row-50">
                 <div class="col-lg-12 col-xl-12">
-                   
+
                     <div class="row row-30 row-lg-50">
 
-                   
 
-                        @foreach ($baths as $bath)
+
+                        @foreach ($pencils as $pencil)
                             <div class="col-sm-6 col-md-4 col-lg-6 col-xl-3">
-                                <!-- Product-->
                                 <article class="product wow fadeInRight">
                                     <div class="product-body">
                                         <div class="product-figure">
-                                            <img src="{{ asset('storage/' . $bath->image) }}" alt="{{ $bath->title }}"
+                                            <img src="{{ asset('storage/' . $pencil->image) }}" alt="{{ $pencil->titleRu }}"
                                                 width="200">
                                         </div>
-                                        <h5 class="product-title"><a
-                                                href="{{ route('bath.single', $bath->id) }}">{{ app()->getLocale() === 'ru' ? $bath->titleRu : $bath->titleEn }}</a>
+                                        <h5 class="product-title">
+                                            <a href="{{ route('bath.single', $pencil->id) }}">
+                                                {{ app()->getLocale() === 'ru' ? $pencil->titleRu : $pencil->titleEn }}
+                                            </a>
                                         </h5>
                                         <div class="product-price-wrap">
                                             <div class="product-price product-price-old price-none">
-                                                {!! app()->getLocale() === 'ru' ? $bath->descriptionRu : $bath->descriptionEn !!}
+                                                {!! app()->getLocale() === 'ru' ? $pencil->descriptionRu : $pencil->descriptionEn !!}
                                             </div>
-
                                         </div>
                                     </div>
-
                                     <div class="product-button-wrap">
-                                        <div class="product-button"><a
-                                                class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
-                                                href="{{ route('bath.single', $bath->id) }}"></a></div>
-                                    
+                                        <div class="product-button">
+                                            <a class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
+                                                href="{{ route('pencil.single', $pencil->id) }}"></a>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
                         @endforeach
+
                     </div>
                     <div class="pagination-wrap">
                         <!-- Bootstrap Pagination-->
