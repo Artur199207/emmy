@@ -170,6 +170,26 @@
 
                      </ul>
                  </li>
+                  <li class="menu-item">
+                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                         <i class="menu-icon tf-icons bx bx-layout"></i>
+                         <div class="text-truncate" data-i18n="Layouts">Шкаф </div>
+                     </a>
+
+                     <ul class="menu-sub">
+                         <li class="menu-item">
+                             <a href="{{ route('locker.create') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Добавить </div>
+                             </a>
+                         </li>
+                         <li class="menu-item">
+                             <a href="{{ route('locker.index') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Просматривать </div>
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
              </ul>
          </aside>
          <div class="main-section">

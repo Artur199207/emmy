@@ -8,6 +8,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BathController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\LockersController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\PencilController;
 use App\Http\Controllers\ProductController;
@@ -74,7 +75,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::delete('/products/{shiping}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 
-    Route::get('/blog',[BlogController::class,'index'])->name('blog.index');
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
     Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
     Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
     Route::get('/blog/{shiping}/edit', [BlogController::class, 'edit'])->name('blog.edit');
@@ -82,18 +83,25 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::delete('/blog/{shiping}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 
-    Route::get('/bath',[BathController::class,'index'])->name('bath.index');
+    Route::get('/bath', [BathController::class, 'index'])->name('bath.index');
     Route::get('/bath/create', [BathController::class, 'create'])->name('bath.create');
     Route::post('/bath', [BathController::class, 'store'])->name('bath.store');
     Route::get('/bath/{shiping}/edit', [BathController::class, 'edit'])->name('bath.edit');
     Route::put('/bath/{shiping}', [BathController::class, 'update'])->name('bath.update');
     Route::delete('/bath/{shiping}', [BathController::class, 'destroy'])->name('bath.destroy');
 
-    Route::get('/pencil',[PencilController::class,'index'])->name('pencil.index');
+    Route::get('/pencil', [PencilController::class, 'index'])->name('pencil.index');
     Route::get('/pencil/create', [PencilController::class, 'create'])->name('pencil.create');
     Route::post('/pencil', [PencilController::class, 'store'])->name('pencil.store');
     Route::get('/pencil/{shiping}/edit', [PencilController::class, 'edit'])->name('pencil.edit');
     Route::put('/pencil/{shiping}', [PencilController::class, 'update'])->name('pencil.update');
     Route::delete('/pencil/{shiping}', [PencilController::class, 'destroy'])->name('pencil.destroy');
 
+
+    Route::get('/locker', [LockersController::class, 'index'])->name('locker.index');
+    Route::get('/locker/create', [LockersController::class, 'create'])->name('locker.create');
+    Route::post('/locker', [LockersController::class, 'store'])->name('locker.store');
+    Route::get('/locker/{shiping}/edit', [LockersController::class, 'edit'])->name('locker.edit');
+    Route::put('/locker/{shiping}', [LockersController::class, 'update'])->name('locker.update');
+    Route::delete('/locker/{shiping}', [LockersController::class, 'destroy'])->name('locker.destroy');
 });
