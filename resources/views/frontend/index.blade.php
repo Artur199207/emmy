@@ -204,7 +204,7 @@
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a
-                                                href="single-product.html">Навесные шкафы</a></h5>
+                                                href="{{ route('locker') }}">Навесные шкафы</a></h5>
                                         {{-- <div class="thumbnail-classic-price">$10.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a

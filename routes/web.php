@@ -28,7 +28,11 @@ Route::get('/bath', function () {
 Route::get('/pencil', function () {
     return view('frontend.pencil');
 })->name('pencil');
+Route::get('/locker', function () {
+    return view('frontend.locker');
+})->name('locker');
 Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
+Route::get('/locker', [FrontendController::class, 'showLokers'])->name('locker');
 
 Route::get('/bath', [FrontendController::class, 'showBath'])->name('bath');
 Route::get('/bath/{id}', [FrontendController::class, 'showBathSingle'])->name('bath.single');

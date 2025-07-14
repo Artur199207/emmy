@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\BannerModel;
 use App\Models\Bath;
 use App\Models\Blog;
+use App\Models\Lockers;
 use App\Models\Offer;
 use App\Models\Pencil;
 use App\Models\Product;
@@ -49,9 +50,14 @@ class FrontendController extends Controller
         $pencils = Pencil::all();
         return view('frontend.pencil', compact('pencils'));
     }
-      public function showPencilSingle($id)
+    public function showPencilSingle($id)
     {
         $pencil = Pencil::findOrFail($id);
         return view('frontend.pencil-single', compact('pencil'));
     }
+   public function showLokers()
+{
+    $lockers = Lockers::all();
+    return view('frontend.locker', compact('lockers')); 
+}
 }
