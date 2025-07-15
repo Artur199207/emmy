@@ -150,18 +150,18 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src=""
-                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
+                                        height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="{{ route('bath') }}">Экраны под ванну</a></h5>
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('bath') }}">Экраны под
+                                                ванну</a></h5>
                                         {{-- <div class="thumbnail-classic-price">$8.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="" data-lightgallery="item">
-                                                    <img src=""" alt=""
-                                                        width="270" height="250" />
+                                                    <img src=""" alt="" width="270" height="250" />
                                                 </a>
                                             </div>
                                             {{-- <div class="thumbnail-classic-button"><a
@@ -175,8 +175,8 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src=""
-                                        alt="" width="270" height="530" /> </div>
+                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
+                                        height="530" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a href="{{ route('pencil') }}">пеналы </a>
@@ -186,8 +186,8 @@
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-2.jpg"
-                                                    data-lightgallery="item"><img src=""
-                                                        alt="" width="270" height="530" /></a></div>
+                                                    data-lightgallery="item"><img src="" alt=""
+                                                        width="270" height="530" /></a></div>
                                             {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
                                                     href="cart-page.html"></a></div> --}}
@@ -199,19 +199,19 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src=""
-                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
+                                        height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a
-                                                href="{{ route('locker') }}">Навесные шкафы</a></h5>
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('locker') }}">Навесные
+                                                шкафы</a></h5>
                                         {{-- <div class="thumbnail-classic-price">$10.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-3.jpg"
-                                                    data-lightgallery="item"><img src=""
-                                                        alt="" width="270" height="250" /></a></div>
+                                                    data-lightgallery="item"><img src="" alt=""
+                                                        width="270" height="250" /></a></div>
                                             {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
                                                     href="cart-page.html"></a></div> --}}
@@ -223,19 +223,19 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src=""
-                                        alt="" width="270" height="250" /> </div>
+                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
+                                        height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('skins') }}">
                                                 Тумбы с раковинами</a></h5>
                                         {{-- <div class="thumbnail-classic-price">$13.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-4.jpg"
-                                                    data-lightgallery="item"><img src=""
-                                                        alt="" width="270" height="250" /></a></div>
+                                                    data-lightgallery="item"><img src="" alt=""
+                                                        width="270" height="250" /></a></div>
                                             {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
                                                     href="cart-page.html"></a></div> --}}

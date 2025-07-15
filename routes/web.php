@@ -13,6 +13,7 @@ use App\Http\Controllers\OfferController;
 use App\Http\Controllers\PencilController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShipingController;
+use App\Http\Controllers\SkinsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,12 +32,18 @@ Route::get('/pencil', function () {
 Route::get('/locker', function () {
     return view('frontend.locker');
 })->name('locker');
+Route::get('/skins', function () {
+    return view('frontend.skins');
+})->name('skins');
 Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
 Route::get('/locker', [FrontendController::class, 'showLokers'])->name('locker');
+Route::get('/skins', [FrontendController::class, 'showSkins'])->name('skins');
 
 Route::get('/bath', [FrontendController::class, 'showBath'])->name('bath');
 Route::get('/bath/{id}', [FrontendController::class, 'showBathSingle'])->name('bath.single');
 Route::get('/pencil/{id}', [FrontendController::class, 'showPencilSingle'])->name('pencil.single');
+Route::get('/locker/{id}', [FrontendController::class, 'showlockerSingle'])->name('locker.single');
+Route::get('/skins/{id}', [FrontendController::class, 'showSkinsSingle'])->name('skins.single');
 
 
 Auth::routes();
@@ -108,4 +115,13 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/locker/{shiping}/edit', [LockersController::class, 'edit'])->name('locker.edit');
     Route::put('/locker/{shiping}', [LockersController::class, 'update'])->name('locker.update');
     Route::delete('/locker/{shiping}', [LockersController::class, 'destroy'])->name('locker.destroy');
+
+
+
+     Route::get('/skins', [SkinsController::class, 'index'])->name('skins.index');
+    Route::get('/skins/create', [SkinsController::class, 'create'])->name('skins.create');
+    Route::post('/skins', [SkinsController::class, 'store'])->name('skins.store');
+    Route::get('/skins/{shiping}/edit', [SkinsController::class, 'edit'])->name('skins.edit');
+    Route::put('/skins/{shiping}', [SkinsController::class, 'update'])->name('skins.update');
+    Route::delete('/skins/{shiping}', [SkinsController::class, 'destroy'])->name('skins.destroy');
 });

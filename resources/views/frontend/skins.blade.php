@@ -10,7 +10,7 @@
         <div class="parallax-container breadcrumbs_section">
             <div class="breadcrumbs-custom-body parallax-content context-dark">
                 <div class="container">
-                    <h1 class="breadcrumbs-custom-title">Пенал</h1>
+                    <h1 class="breadcrumbs-custom-title">Тумбы с раковинами</h1>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div class="container">
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ url('/') }}">@lang('public.home')</a></li>
-                    <li class="active">Пенал</li>
+                    <li class="active">Тумбы с раковинами</li>
                 </ul>
             </div>
         </div>
@@ -33,29 +33,29 @@
 
 
 
-                   @foreach ($lockers as $locker)
+                        @foreach ($skins as $pencil)
                             <div class="col-sm-6 col-md-4 col-lg-6 col-xl-3">
                                 <article class="product wow fadeInRight">
                                     <div class="product-body">
                                         <div class="product-figure">
-                                            <img src="{{ asset('storage/' . $locker->image) }}" alt="{{ $locker->titleRu }}"
+                                            <img src="{{ asset('storage/' . $pencil->image) }}" alt="{{ $pencil->titleRu }}"
                                                 width="200">
                                         </div>
                                         <h5 class="product-title">
-                                            <a href="{{ route('bath.single', $locker->id) }}">
-                                                {{ app()->getLocale() === 'ru' ? $locker->titleRu : $locker->titleEn }}
+                                            <a href="{{ route('bath.single', $pencil->id) }}">
+                                                {{ app()->getLocale() === 'ru' ? $pencil->titleRu : $pencil->titleEn }}
                                             </a>
                                         </h5>
                                         <div class="product-price-wrap">
                                             <div class="product-price product-price-old price-none">
-                                                {!! app()->getLocale() === 'ru' ? $locker->descriptionRu : $locker->descriptionEn !!}
+                                                {!! app()->getLocale() === 'ru' ? $pencil->descriptionRu : $pencil->descriptionEn !!}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-button-wrap">
                                         <div class="product-button">
                                             <a class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
-                                                href="{{ route('locker.single', $locker->id) }}"></a>
+                                                href="{{ route('skins.single', $pencil->id) }}"></a>
                                         </div>
                                     </div>
                                 </article>

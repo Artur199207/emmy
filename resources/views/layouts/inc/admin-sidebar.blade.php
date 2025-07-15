@@ -170,7 +170,7 @@
 
                      </ul>
                  </li>
-                  <li class="menu-item">
+                 <li class="menu-item">
                      <a href="javascript:void(0);" class="menu-link menu-toggle">
                          <i class="menu-icon tf-icons bx bx-layout"></i>
                          <div class="text-truncate" data-i18n="Layouts">Шкаф </div>
@@ -185,6 +185,26 @@
                          <li class="menu-item">
                              <a href="{{ route('locker.index') }}" class="menu-link">
                                  <div class="text-truncate" data-i18n="Blank">Просматривать </div>
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
+                  <li class="menu-item">
+                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                         <i class="menu-icon tf-icons bx bx-layout"></i>
+                         <div class="text-truncate" data-i18n="Layouts">Тумбы с раковинами </div>
+                     </a>
+
+                     <ul class="menu-sub">
+                         <li class="menu-item">
+                             <a href="{{ route('skins.create') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Добавить </div>
+                             </a>
+                         </li>
+                         <li class="menu-item">
+                             <a href="{{ route('skins.index') }}" class="menu-link">
+                                 <div class="skins-truncate" data-i18n="Blank">Просматривать </div>
                              </a>
                          </li>
 

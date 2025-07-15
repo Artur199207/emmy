@@ -11,6 +11,7 @@ use App\Models\Offer;
 use App\Models\Pencil;
 use App\Models\Product;
 use App\Models\Shiping;
+use App\Models\Skins;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -55,9 +56,24 @@ class FrontendController extends Controller
         $pencil = Pencil::findOrFail($id);
         return view('frontend.pencil-single', compact('pencil'));
     }
-   public function showLokers()
-{
-    $lockers = Lockers::all();
-    return view('frontend.locker', compact('lockers')); 
-}
+    public function showLokers()
+    {
+        $lockers = Lockers::all();
+        return view('frontend.locker', compact('lockers'));
+    }
+    public function showlockerSingle($id)
+    {
+        $locker = Lockers::findOrFail($id);
+        return view('frontend.locker-single', compact('locker'));
+    }
+    public function showSkins()
+    {
+        $skins = Skins::all();
+        return view('frontend.skins', compact('skins'));
+    }
+     public function showSkinsSingle($id)
+    {
+        $skins = Skins::findOrFail($id);
+        return view('frontend.skins-single', compact('skins'));
+    }
 }
