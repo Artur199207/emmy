@@ -251,18 +251,17 @@
                                         alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Custom
-                                                Furnitures</a></h5>
-                                        <div class="thumbnail-classic-price">$14.99</div>
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('mirror') }}">Зеркала</a></h5>
+                                        {{-- <div class="thumbnail-classic-price">$14.99</div> --}}
                                         <div class="thumbnail-classic-button-wrap">
                                             <div class="thumbnail-classic-button"><a
                                                     class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
                                                     href="images/masonry-gallery/image-5.jpg"
                                                     data-lightgallery="item"><img src="images/masonry-gallery/image-5.jpg"
                                                         alt="" width="270" height="250" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
+                                            {{-- <div class="thumbnail-classic-button"><a
                                                     class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                                    href="cart-page.html"></a></div> --}}
                                         </div>
                                     </div>
                                 </div>

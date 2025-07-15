@@ -9,6 +9,7 @@ use App\Http\Controllers\BathController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\LockersController;
+use App\Http\Controllers\MirrorController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\PencilController;
 use App\Http\Controllers\ProductController;
@@ -35,15 +36,20 @@ Route::get('/locker', function () {
 Route::get('/skins', function () {
     return view('frontend.skins');
 })->name('skins');
+Route::get('/mirror', function () {
+    return view('frontend.mirror');
+})->name('mirror');
 Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
 Route::get('/locker', [FrontendController::class, 'showLokers'])->name('locker');
 Route::get('/skins', [FrontendController::class, 'showSkins'])->name('skins');
+Route::get('/mirror', [FrontendController::class, 'showMirror'])->name('mirror');
 
 Route::get('/bath', [FrontendController::class, 'showBath'])->name('bath');
 Route::get('/bath/{id}', [FrontendController::class, 'showBathSingle'])->name('bath.single');
 Route::get('/pencil/{id}', [FrontendController::class, 'showPencilSingle'])->name('pencil.single');
 Route::get('/locker/{id}', [FrontendController::class, 'showlockerSingle'])->name('locker.single');
 Route::get('/skins/{id}', [FrontendController::class, 'showSkinsSingle'])->name('skins.single');
+Route::get('/mirror/{id}', [FrontendController::class, 'showMirrorSingle'])->name('mirror.single');
 
 
 Auth::routes();
@@ -124,4 +130,11 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/skins/{shiping}/edit', [SkinsController::class, 'edit'])->name('skins.edit');
     Route::put('/skins/{shiping}', [SkinsController::class, 'update'])->name('skins.update');
     Route::delete('/skins/{shiping}', [SkinsController::class, 'destroy'])->name('skins.destroy');
+
+      Route::get('/mirror', [MirrorController::class, 'index'])->name('mirror.index');
+    Route::get('/mirror/create', [MirrorController::class, 'create'])->name('mirror.create');
+    Route::post('/mirror', [MirrorController::class, 'store'])->name('mirror.store');
+    Route::get('/mirror/{shiping}/edit', [MirrorController::class, 'edit'])->name('mirror.edit');
+    Route::put('/mirror/{shiping}', [MirrorController::class, 'update'])->name('mirror.update');
+    Route::delete('/mirror/{shiping}', [MirrorController::class, 'destroy'])->name('mirror.destroy');
 });

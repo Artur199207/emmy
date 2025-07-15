@@ -7,6 +7,7 @@ use App\Models\BannerModel;
 use App\Models\Bath;
 use App\Models\Blog;
 use App\Models\Lockers;
+use App\Models\Mirror;
 use App\Models\Offer;
 use App\Models\Pencil;
 use App\Models\Product;
@@ -75,5 +76,15 @@ class FrontendController extends Controller
     {
         $skins = Skins::findOrFail($id);
         return view('frontend.skins-single', compact('skins'));
+    }
+    public function showMirror()
+    {
+        $mirror = Mirror::all();
+        return view('frontend.mirror', compact('mirror'));
+    }
+     public function showMirrorSingle($id)
+    {
+        $mirror = Mirror::findOrFail($id);
+        return view('frontend.mirror-single', compact('mirror'));
     }
 }
