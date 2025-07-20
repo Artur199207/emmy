@@ -62,12 +62,12 @@
 
               <div class="single-dropdown">
                 <div class="dropdown show">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="btn btn-secondary dropdown-toggle" href="{{ route('loginReg') }}" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false"> @lang('public.LoginRegistration') </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                    <a class="dropdown-item" href="#">@lang('public.Login')</a>
-                   <a class="dropdown-item" href="#">@lang('public.Registration')</a> </div>
+                    <a class="dropdown-item" href="{{ route('loginReg') }}">@lang('public.Login')</a>
+                   <a class="dropdown-item" href="{{ route('loginReg') }}">@lang('public.Registration')</a> </div>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="what-we-offer.html">@lang('public.applications')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('ourTeam') }}">@lang('public.team')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="testimonials.html">@lang('public.reviews')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="pricing-list.html">@lang('public.pricelist')т</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('price') }}">@lang('public.pricelist')т</a> </li>
                   </ul>
                 </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="grid-shop.html">@lang('public.catalog')</a>
@@ -163,9 +163,9 @@
                     <li class="ch-megamenu-item ch-megamenu-item-2">
                       <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-layers"></span><span class="ch-megamenu-text">@lang('public.Payment')</span></h6>
                       <ul class="ch-megamenu-list">
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="404-page.html">@lang('public.Page')</a></li>
+                        {{-- <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="404-page.html">@lang('public.Page')</a></li> --}}
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="coming-soon.html">@lang('public.newitems')</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="contact-us.html">@lang('public.Contactus')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('contact') }}">@lang('public.Contactus')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="privacy-policy.html">@lang('public.privacypolicy')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="search-results.html">@lang('public.Searchresults')</a></li>
                       </ul>

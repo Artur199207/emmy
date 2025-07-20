@@ -16,6 +16,17 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShipingController;
 use App\Http\Controllers\SkinsController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\Auth\CustomAuthController;
+
+
+Route::get('/register', [CustomAuthController::class, 'showRegister'])->name('custom.register');
+Route::post('/register', [CustomAuthController::class, 'register']);
+
+Route::get('/login', [CustomAuthController::class, 'showLogin'])->name('custom.login');
+Route::post('/login', [CustomAuthController::class, 'login']);
+
+Route::post('/logout', [CustomAuthController::class, 'logout'])->name('custom.logout');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -49,6 +60,15 @@ Route::get('/application', function () {
 Route::get('/ourTeam', function () {
     return view('frontend.ourTeam');
 })->name('ourTeam');
+Route::get('/loginReg', function () {
+    return view('frontend.loginReg');
+})->name('loginReg');
+Route::get('/price', function () {
+    return view('frontend.price');
+})->name('price');
+Route::get('/contact', function () {
+    return view('frontend.contact');
+})->name('contact');
 Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
 Route::get('/locker', [FrontendController::class, 'showLokers'])->name('locker');
 Route::get('/skins', [FrontendController::class, 'showSkins'])->name('skins');
