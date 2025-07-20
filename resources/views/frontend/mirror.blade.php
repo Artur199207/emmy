@@ -48,7 +48,7 @@
                                         </h5>
                                         <div class="product-price-wrap">
                                             <div class="product-price product-price-old price-none">
-                                                {!! app()->getLocale() === 'ru' ? $pencil->descriptionRu : $pencil->descriptionEn !!}
+                                              Emmy
                                             </div>
                                         </div>
                                     </div>

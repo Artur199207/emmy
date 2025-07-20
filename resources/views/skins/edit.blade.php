@@ -117,7 +117,7 @@
                <div class="form-group form-action">
                 <label><strong>Цвета</strong></label><br>
                 <div id="colorInputs">
-                    @foreach (json_decode($skins->color, true) ?? [] as $color)
+                   @foreach (json_decode($skins->color, true) ?? [] as $color)
                         <div class="color-input-row mb-2">
                             <input type="color" name="color[]" value="{{ $color }}">
                             <button type="button" onclick="removeColorInput(this)"

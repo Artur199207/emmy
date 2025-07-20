@@ -49,7 +49,7 @@
             <div class="container">
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ url('/') }}">@lang('public.home')</a></li>
-                    <li><a href="{{ route('pencil') }}">@lang('public.shop')</a></li>
+                    <li><a href="{{ route('mirror') }}">@lang('public.shop')</a></li>
                     <li class="active">@lang('public.product-singl')</li>
                 </ul>
             </div>

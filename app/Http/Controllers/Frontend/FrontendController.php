@@ -13,6 +13,7 @@ use App\Models\Pencil;
 use App\Models\Product;
 use App\Models\Shiping;
 use App\Models\Skins;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -72,7 +73,7 @@ class FrontendController extends Controller
         $skins = Skins::all();
         return view('frontend.skins', compact('skins'));
     }
-     public function showSkinsSingle($id)
+    public function showSkinsSingle($id)
     {
         $skins = Skins::findOrFail($id);
         return view('frontend.skins-single', compact('skins'));
@@ -82,9 +83,19 @@ class FrontendController extends Controller
         $mirror = Mirror::all();
         return view('frontend.mirror', compact('mirror'));
     }
-     public function showMirrorSingle($id)
+    public function showMirrorSingle($id)
     {
         $mirror = Mirror::findOrFail($id);
         return view('frontend.mirror-single', compact('mirror'));
+    }
+    public function showabouteUs()
+    {
+        $offers = Offer::all();
+        return view('frontend.abouteUs', compact('offers'));
+    }
+    public function showaTeam()
+    {
+        $team = Team::all();
+        return view('frontend.ourTeam', compact('team'));
     }
 }

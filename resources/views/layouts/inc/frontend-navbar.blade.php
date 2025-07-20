@@ -108,9 +108,9 @@
                 <li class="ch-nav-item active"><a class="ch-nav-link" href="{{url('/')}}">@lang('public.home')</a> </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.navigation')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
-                    <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="about-us.html">@lang('public.company')</a> </li>
+                    <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="{{ route('abouteUs') }}">@lang('public.company')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="what-we-offer.html">@lang('public.applications')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="our-team.html">@lang('public.team')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('ourTeam') }}">@lang('public.team')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="testimonials.html">@lang('public.reviews')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="pricing-list.html">@lang('public.pricelist')т</a> </li>
                   </ul>

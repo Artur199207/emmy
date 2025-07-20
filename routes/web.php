@@ -15,6 +15,7 @@ use App\Http\Controllers\PencilController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShipingController;
 use App\Http\Controllers\SkinsController;
+use App\Http\Controllers\TeamController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,10 +40,23 @@ Route::get('/skins', function () {
 Route::get('/mirror', function () {
     return view('frontend.mirror');
 })->name('mirror');
+Route::get('/abouteUs', function () {
+    return view('frontend.abouteUs');
+})->name('abouteUs');
+Route::get('/application', function () {
+    return view('frontend.application');
+})->name('application');
+Route::get('/ourTeam', function () {
+    return view('frontend.ourTeam');
+})->name('ourTeam');
 Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
 Route::get('/locker', [FrontendController::class, 'showLokers'])->name('locker');
 Route::get('/skins', [FrontendController::class, 'showSkins'])->name('skins');
 Route::get('/mirror', [FrontendController::class, 'showMirror'])->name('mirror');
+Route::get('/abouteUs', [FrontendController::class, 'showabouteUs'])->name('abouteUs');
+Route::get('/application', [FrontendController::class, 'showaApplication'])->name('application');
+
+Route::get('/ourTeam', [FrontendController::class, 'showaTeam'])->name('ourTeam');
 
 Route::get('/bath', [FrontendController::class, 'showBath'])->name('bath');
 Route::get('/bath/{id}', [FrontendController::class, 'showBathSingle'])->name('bath.single');
@@ -137,4 +151,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/mirror/{shiping}/edit', [MirrorController::class, 'edit'])->name('mirror.edit');
     Route::put('/mirror/{shiping}', [MirrorController::class, 'update'])->name('mirror.update');
     Route::delete('/mirror/{shiping}', [MirrorController::class, 'destroy'])->name('mirror.destroy');
+
+
+     Route::get('/team', [TeamController::class, 'index'])->name('team.index');
+    Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
+    Route::post('/team', [TeamController::class, 'store'])->name('team.store');
+    Route::get('/team/{shiping}/edit', [TeamController::class, 'edit'])->name('team.edit');
+    Route::put('/team/{shiping}', [TeamController::class, 'update'])->name('team.update');
+    Route::delete('/team/{shiping}', [TeamController::class, 'destroy'])->name('team.destroy');
 });
