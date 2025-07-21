@@ -98,4 +98,9 @@ class FrontendController extends Controller
         $team = Team::all();
         return view('frontend.ourTeam', compact('team'));
     }
+   public function showShipings()
+{
+    $shipings = Shiping::all();
+    return view('frontend.price', compact('shipings'));
+}
 }

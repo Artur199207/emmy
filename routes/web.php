@@ -19,11 +19,9 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Auth\CustomAuthController;
 
 
-Route::get('/register', [CustomAuthController::class, 'showRegister'])->name('custom.register');
+Route::get('/register', [CustomAuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [CustomAuthController::class, 'register']);
 
-Route::get('/login', [CustomAuthController::class, 'showLogin'])->name('custom.login');
-Route::post('/login', [CustomAuthController::class, 'login']);
 
 Route::post('/logout', [CustomAuthController::class, 'logout'])->name('custom.logout');
 
@@ -69,12 +67,20 @@ Route::get('/price', function () {
 Route::get('/contact', function () {
     return view('frontend.contact');
 })->name('contact');
+Route::get('/page-offers', function () {
+    return view('frontend.page-offers');
+})->name('page-offers');
+Route::get('/private-police', function () {
+    return view('frontend.private-police');
+})->name('private-police');
+
 Route::get('/pencil', [FrontendController::class, 'showPencil'])->name('pencil');
 Route::get('/locker', [FrontendController::class, 'showLokers'])->name('locker');
 Route::get('/skins', [FrontendController::class, 'showSkins'])->name('skins');
 Route::get('/mirror', [FrontendController::class, 'showMirror'])->name('mirror');
 Route::get('/abouteUs', [FrontendController::class, 'showabouteUs'])->name('abouteUs');
 Route::get('/application', [FrontendController::class, 'showaApplication'])->name('application');
+Route::get('/price', [FrontendController::class, 'showShipings'])->name('price');
 
 Route::get('/ourTeam', [FrontendController::class, 'showaTeam'])->name('ourTeam');
 

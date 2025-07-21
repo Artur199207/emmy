@@ -34,13 +34,18 @@ return [
     | Supported: "session"
     |
     */
-
     'guards' => [
-        'web' => [
+        'web' => [ // default guard
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'users', // առկա է
+        ],
+
+        'newuser' => [ // նոր guard հատուկ newusers-ի համար
+            'driver' => 'session',
+            'provider' => 'newusers',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -59,17 +64,21 @@ return [
     |
     */
 
+    // config/auth.php
+
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'newusers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\NewUser::class,
+        ],
     ],
+
+
 
     /*
     |--------------------------------------------------------------------------

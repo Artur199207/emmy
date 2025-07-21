@@ -109,10 +109,10 @@
                 <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.navigation')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
                     <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="{{ route('abouteUs') }}">@lang('public.company')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="what-we-offer.html">@lang('public.applications')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('page-offers') }}">@lang('public.applications')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('ourTeam') }}">@lang('public.team')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="testimonials.html">@lang('public.reviews')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('price') }}">@lang('public.pricelist')т</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('price') }}">@lang('public.pricelist')</a> </li>
                   </ul>
                 </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="grid-shop.html">@lang('public.catalog')</a>
@@ -166,7 +166,7 @@
                         {{-- <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="404-page.html">@lang('public.Page')</a></li> --}}
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="coming-soon.html">@lang('public.newitems')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('contact') }}">@lang('public.Contactus')</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="privacy-policy.html">@lang('public.privacypolicy')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('private-police') }}">@lang('public.privacypolicy')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="search-results.html">@lang('public.Searchresults')</a></li>
                       </ul>
                     </li>
