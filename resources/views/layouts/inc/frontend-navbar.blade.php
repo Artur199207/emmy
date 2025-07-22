@@ -111,7 +111,7 @@
                     <li class="ch-dropdown-item active"><a class="ch-dropdown-link" href="{{ route('abouteUs') }}">@lang('public.company')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('page-offers') }}">@lang('public.applications')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('ourTeam') }}">@lang('public.team')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="testimonials.html">@lang('public.reviews')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('contactis') }}">@lang('public.reviews')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('price') }}">@lang('public.pricelist')</a> </li>
                   </ul>
                 </li>

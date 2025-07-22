@@ -350,56 +350,56 @@
                 <div class="owl-carousel" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5"
                     data-margin="30" data-dots="true" data-autoplay="true">
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/kirovit.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/logotip.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/madera.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/melana.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/rosa.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/santek.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/untitled-4.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="./images/logo-emmy.png" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/untitled-5.webp') }}" alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>

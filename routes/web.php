@@ -17,6 +17,14 @@ use App\Http\Controllers\ShipingController;
 use App\Http\Controllers\SkinsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Auth\CustomAuthController;
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+
+Route::get('/contactis', function () {
+    return view('contactis.store'); // կոնտակտների ցուցակը կամ տվյալների էջը
+})->name('contactis');
 
 
 Route::get('/register', [CustomAuthController::class, 'showRegister'])->name('register');
