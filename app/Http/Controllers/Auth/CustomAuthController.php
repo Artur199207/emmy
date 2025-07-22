@@ -14,6 +14,7 @@ class CustomAuthController extends Controller
    
 public function register(Request $request)
 {
+    // dd($request->all());
     $request->validate([
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:newusers,email',
@@ -25,9 +26,9 @@ public function register(Request $request)
         'email' => $request->email,
         'password' => Hash::make($request->password),
     ]);
-dd($user);
+
     Auth::login($user);
 
-    return redirect()->route('auth.registr'); // փոխիր ըստ անհրաժեշտության
+    return redirect()->route('register-user'); 
 }
 }

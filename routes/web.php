@@ -21,14 +21,14 @@ use App\Http\Controllers\ContactController;
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
-
-Route::get('/contactis', function () {
-    return view('contactis.store'); // կոնտակտների ցուցակը կամ տվյալների էջը
-})->name('contactis');
+Route::get('/contactis', [ContactController::class, 'getAll'])->name('contactis');
 
 
-Route::get('/register', [CustomAuthController::class, 'showRegister'])->name('register');
-Route::post('/register', [CustomAuthController::class, 'register']);
+
+
+
+Route::get('/register', [CustomAuthController::class, 'showRegister']);
+Route::post('/register-user', [CustomAuthController::class, 'register'])->name('register-user');
 
 
 Route::post('/logout', [CustomAuthController::class, 'logout'])->name('custom.logout');

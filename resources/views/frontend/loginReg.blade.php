@@ -134,7 +134,7 @@
         <section class="wrapper">
             <div class="form signup">
                 <header>Зарегистрироваться</header>
-                <form method="POST" action="/register">
+                <form method="POST" action="/register-user">
                     @csrf
                     <input type="text" name="name" placeholder="Полное имя" required />
                     <input type="email" name="email" placeholder="Адрес электронной почты" required />

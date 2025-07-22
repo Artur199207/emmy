@@ -49,4 +49,31 @@
 @endif
 
 
+@if($contacts->isEmpty())
+        <p>No contacts found.</p>
+    @else
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($contacts as $contact)
+                    <tr>
+                        <td>{{ $contact->first_name }}</td>
+                        <td>{{ $contact->last_name }}</td>
+                        <td>{{ $contact->email }}</td>
+                        <td>{{ $contact->phone }}</td>
+                        <td>{{ $contact->message }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+@endif
+
 @endsection
