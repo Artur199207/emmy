@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @section('title', 'Эмми Мебель – Современная и качественная мебель для вашего дома')
 @section('content')
@@ -23,8 +24,9 @@
       <section class="section section-md bg-default text-md-left">
         <div class="container">
           <div class="title-classic">
-            <h3 class="title-classic-title">Get in touch</h3>
-            <p class="title-classic-subtitle">We are available 24/7 by fax, e-mail or by phone. You can also use our <br class="d-none d-lg-block">quick contact form to ask a question about our products.</p>
+            <h3 class="title-classic-title">Свяжитесь с нами</h3>
+            <p class="title-classic-subtitle">Мы доступны круглосуточно по факсу, электронной почте или телефону. Вы также можете воспользоваться нашей
+                <br class="d-none d-lg-block"> формой быстрой связи, чтобы задать вопрос о нашей продукции.</p>
           </div>
           <form class="ch-form ch-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="#">
             <div class="row row-20 row-md-30">
@@ -33,13 +35,13 @@
                   <div class="col-sm-6">
                     <div class="form-wrap">
                       <input class="form-input" id="contact-first-name-2" type="text" />
-                      <label class="form-label" for="contact-first-name-2">First Name</label>
+                      <label class="form-label" for="contact-first-name-2">Имя</label>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-wrap">
                       <input class="form-input" id="contact-last-name-2" type="text" />
-                      <label class="form-label" for="contact-last-name-2">Last Name</label>
+                      <label class="form-label" for="contact-last-name-2">Фамилия</label>
                     </div>
                   </div>
                   <div class="col-sm-6">
@@ -51,19 +53,19 @@
                   <div class="col-sm-6">
                     <div class="form-wrap">
                       <input class="form-input" id="contact-phone-2" type="text" />
-                      <label class="form-label" for="contact-phone-2">Phone</label>
+                      <label class="form-label" for="contact-phone-2">Номер телефона</label>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="form-wrap">
-                  <label class="form-label" for="contact-message-2">Message</label>
+                  <label class="form-label" for="contact-message-2">Сообщение</label>
                   <textarea class="form-input textarea-lg" id="contact-message-2" ></textarea>
                 </div>
               </div>
             </div>
-            <button class="button button-sm button-primary button-zakaria" type="submit">Send Message</button>
+            <button class="button button-sm button-primary button-zakaria" type="submit">Отправить</button>
           </form>
         </div>
       </section>
@@ -72,20 +74,22 @@
         <div class="container">
           <div class="row row-30 justify-content-center">
             <div class="col-sm-6 col-md-4">
-              <h4 class="font-weight-regular"> Phones</h4>
+              <h4 class="font-weight-regular"> Телефонные номера</h4>
               <ul class="contacts-classic">
-                <li>Office <a href="tel:#">+01-23-4226789</a>
+                <li>Офис <a href="tel:#">+01-23-4226789</a>
                 </li>
-                <li>Fax <a href="tel:#">+01-23-4226789</a>
+
+<li>Факс <a href="tel:#">+01-23-4226789</a>
                 </li>
               </ul>
             </div>
             <div class="col-sm-6 col-md-4">
-              <h4 class="font-weight-regular"> Address</h4>
+              <h4 class="font-weight-regular"> Адрес</h4>
               <div class="contacts-classic"><a href="#">272B St#4, 1st Floor<br/>
                     DC Office, Washington USA</a></div>
             </div>
-            <div class="col-sm-6 col-md-4">
+
+<div class="col-sm-6 col-md-4">
               <h4 class="font-weight-regular"> E-mails</h4>
               <ul class="contacts-classic">
                 <li><a href="mailTo:#"> hello@example.com</a></li>

@@ -1,11 +1,21 @@
 @extends('layouts.app')
 @section('title', 'Эмми Мебель – Современная и качественная мебель для вашего дома')
 @section('content')
-<style>
-    .price-none{
-        text-decoration: none !important;
-    }
-</style>
+    <style>
+        .price-none {
+            text-decoration: none !important;
+        }
+        article{
+            height: 500px;
+        }
+        .product-figure{
+            height: 250px !important;
+        }
+        .product-figure img{
+            height:  100% !important;
+            object-fit: contain !important;
+        }
+    </style>
     <section class="breadcrumbs-custom">
         <div class="parallax-container breadcrumbs_section">
             <div class="breadcrumbs-custom-body parallax-content context-dark">
@@ -28,10 +38,10 @@
         <div class="container">
             <div class="row row-50">
                 <div class="col-lg-12 col-xl-12">
-                   
+
                     <div class="row row-30 row-lg-50">
 
-                   
+
 
                         @foreach ($baths as $bath)
                             <div class="col-sm-6 col-md-4 col-lg-6 col-xl-3">
@@ -47,17 +57,28 @@
                                         </h5>
                                         <div class="product-price-wrap">
                                             <div class="product-price product-price-old price-none">
-                                                {!! app()->getLocale() === 'ru' ? $bath->descriptionRu : $bath->descriptionEn !!}
+                                                {!! app()->getLocale() === 'ru' ? $bath->articleRu : $bath->articleEn !!}
                                             </div>
 
                                         </div>
+                                        <div class="bigvmn" style="padding-top:30px;padding-bottom:30px;">
+                                            @if ($bath->available)
+                                                <div class="availability" style="color: green; font-weight: bold;">В
+                                                    наличии: Есть</div>
+                                            @else
+                                                <div class="availability" style="color: red; font-weight: bold;">В наличии:
+                                                    Нет</div>
+                                            @endif
+
+                                        </div>
+
                                     </div>
 
                                     <div class="product-button-wrap">
                                         <div class="product-button"><a
                                                 class="button button-gray-14 button-zakaria fl-bigmug-line-search74"
                                                 href="{{ route('bath.single', $bath->id) }}"></a></div>
-                                    
+
                                     </div>
                                 </article>
                             </div>

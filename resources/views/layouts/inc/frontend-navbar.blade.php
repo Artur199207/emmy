@@ -117,11 +117,11 @@
                 </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="grid-shop.html">@lang('public.catalog')</a>
                   <ul class="ch-menu ch-navbar-dropdown">
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="ecwid-shop.html">@lang('public.bathscreen')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop.html">@lang('public.panels')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop-leftsidebar.html">@lang('public.wallcabinets')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-shop-rightsidebar.html">@lang('public.cabinets')</a> </li>
-                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list.html">@lang('public.mirrors')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('bath') }}">@lang('public.bathscreen')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('pencil') }}">@lang('public.panels')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('locker') }}">@lang('public.wallcabinets')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('skins') }}">@lang('public.cabinets')</a> </li>
+                    <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="{{ route('mirror') }}">@lang('public.mirrors')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list-leftsidebar.html">@lang('public.mirrorcabinets')</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="shop-list-rightsidebar.html">@lang('public.toilets')</a> </li>
 
@@ -130,7 +130,7 @@
 
 
 
-                <li class="ch-nav-item"><a class="ch-nav-link" class="ch-dropdown-link" class="ch-dropdown-item" href="blog-post-lefttsidebar.html">Статьи</a>
+                <li class="ch-nav-item"><a class="ch-nav-link" class="ch-dropdown-link" class="ch-dropdown-item" href="{{ route('stati') }}">Статьи</a>
                   <!-- <ul class="ch-menu ch-navbar-dropdown">
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="grid-blog.html">Grid Blog</a> </li>
                     <li class="ch-dropdown-item"><a class="ch-dropdown-link" href="blog-list.html">Blog List</a> </li>
@@ -142,7 +142,7 @@
 
                   </ul> -->
                 </li>
-                <li class="ch-nav-item"><a class="ch-nav-link" href="grid-gallery.html">@lang('public.Gallery')</a>
+                <li class="ch-nav-item"><a class="ch-nav-link" href="{{ route('gallerey') }}">@lang('public.Gallery')</a>
                  
                 </li>
                 <li class="ch-nav-item"><a class="ch-nav-link" href="#">@lang('public.elements')</a>
@@ -150,11 +150,11 @@
                     <li class="ch-megamenu-item ch-megamenu-item-1">
                       <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-apps"></span><span class="ch-megamenu-text">@lang('public.elements')</span></h6>
                       <ul class="ch-megamenu-list">
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="typography.html">@lang('public.bathscreen')</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="icon-lists.html">@lang('public.panels')</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="progress-bars.html">@lang('public.wallcabinets')</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="calls-to-action.html">@lang('public.cabinets')</a></li>
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="tabs-and-accordions.html">@lang('public.mirrors')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('bath') }}">@lang('public.bathscreen')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('pencil') }}">@lang('public.panels')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('locker') }}">@lang('public.wallcabinets')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('skins') }}">@lang('public.cabinets')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('mirror') }}">@lang('public.mirrors')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="buttons.html">@lang('public.mirrorcabinets')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="tables.html">@lang('public.toilets')</a></li>
 
@@ -164,7 +164,7 @@
                       <h6 class="ch-megamenu-title"><span class="ch-megamenu-icon mdi mdi-layers"></span><span class="ch-megamenu-text">@lang('public.Payment')</span></h6>
                       <ul class="ch-megamenu-list">
                         {{-- <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="404-page.html">@lang('public.Page')</a></li> --}}
-                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="coming-soon.html">@lang('public.newitems')</a></li>
+                        <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('soon') }}">@lang('public.newitems')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('contact') }}">@lang('public.Contactus')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="{{ route('private-police') }}">@lang('public.privacypolicy')</a></li>
                         <li class="ch-megamenu-list-item"><a class="ch-megamenu-list-link" href="search-results.html">@lang('public.Searchresults')</a></li>
@@ -182,14 +182,15 @@
               <!-- RD Navbar Search-->
               <div class="ch-navbar-search ch-navbar-search-2">
                 <button class="ch-navbar-search-toggle ch-navbar-fixed-element-3" data-ch-navbar-toggle=".ch-navbar-search"><span></span></button>
-                <form class="ch-search" action="search-results.html" data-search-live="ch-search-results-live" method="GET">
-                  <div class="form-wrap">
-                    <input class="ch-navbar-search-form-input form-input" id="ch-navbar-search-form-input" type="text" name="s" autocomplete="off"/>
-                    <label class="form-label" for="ch-navbar-search-form-input">@lang('public.Search')</label>
-                    <div class="ch-search-results-live" id="ch-search-results-live"></div>
-                    <button class="ch-search-form-submit fl-bigmug-line-search74" type="submit"></button>
-                  </div>
-                </form>
+                <form class="ch-search" action="{{ route('search') }}" method="GET">
+    <div class="form-wrap">
+        <input class="ch-navbar-search-form-input form-input" id="ch-navbar-search-form-input" type="text" name="s" autocomplete="off"/>
+        <label class="form-label" for="ch-navbar-search-form-input">@lang('public.Search')</label>
+        <div class="ch-search-results-live" id="ch-search-results-live"></div>
+        <button class="ch-search-form-submit fl-bigmug-line-search74" type="submit"></button>
+    </div>
+</form>
+
               </div>
               <!-- RD Navbar Basket-->
               <div class="ch-navbar-basket-wrap">

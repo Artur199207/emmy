@@ -79,7 +79,7 @@
                 <div class="col-lg-6">
                     <div class="single-product">
                         <h6>
-  {{ $bath->available === 1 ? 'Есть в наличии' : ($bath->available === 0 ? 'Нет в наличии' : 'Данных нет') }}
+{!! app()->getLocale() === 'ru' ? $bath->titleRu : $bath->titleEn !!}
 </h6>
 
                         <h3 class="text-transform-none font-weight-medium">{!! app()->getLocale() === 'ru' ? $bath->spaceNameRu : $bath->spaceNameEn !!}</h3>

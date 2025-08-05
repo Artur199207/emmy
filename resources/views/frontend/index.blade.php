@@ -7,6 +7,10 @@
             height: 100px;
             object-fit: cover;
         }
+
+        .fgh {
+            height: unset !important;
+        }
     </style>
 
     <main>
@@ -96,7 +100,7 @@
         </section>
         <section class="section section-md bg-primary-2">
             <div class="container">
-                <h2 class="text-transform-capitalize wow fadeScale">Our Products</h2>
+                <h2 class="text-transform-capitalize wow fadeScale">наши продукты</h2>
                 <div class="row row-lg row-30 row-lg-30">
                     @foreach ($products->take(8) as $product)
                         <div class="col-sm-6 col-md-4 col-lg-3">
@@ -142,31 +146,23 @@
                 </div>
             </div>
         </section>
-        <section class="section section-md bg-default">
+        {{-- <section class="section section-md bg-default">
             <div class="container">
                 <h2 class="text-transform-capitalize wow fadeScale">@lang('public.Gallery')</h2>
                 <div class="isotope-wrap">
                     <div class="row row-30 isotope isotope-custom-1" data-lightgallery="group">
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
-                            <!-- Thumbnail Classic-->
+                      
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
-                                        height="250" /> </div>
+                                <div class="thumbnail-classic-figure"><img class="fgh" src="{{ asset('assets/img/экраны.jpg') }}"
+                                        alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a href="{{ route('bath') }}">Экраны под
                                                 ванну</a></h5>
-                                        {{-- <div class="thumbnail-classic-price">$8.99</div> --}}
+                                        
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="" data-lightgallery="item">
-                                                    <img src=""" alt="" width="270" height="250" />
-                                                </a>
-                                            </div>
-                                            {{-- <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div> --}}
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -175,22 +171,16 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
-                                        height="530" /> </div>
+                                <div class="thumbnail-classic-figure"><img class="fgh"
+                                        src="{{ asset('assets/img/пенал — копия.jpeg') }}" alt=""
+                                        width="270" height="530" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a href="{{ route('pencil') }}">пеналы </a>
                                         </h5>
-                                        {{-- <div class="thumbnail-classic-price">$12.99</div> --}}
+                                      
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-2.jpg"
-                                                    data-lightgallery="item"><img src="" alt=""
-                                                        width="270" height="530" /></a></div>
-                                            {{-- <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div> --}}
+                                         
                                         </div>
                                     </div>
                                 </div>
@@ -199,22 +189,16 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
-                                        height="250" /> </div>
+                                <div class="thumbnail-classic-figure"><img class="fgh"
+                                        src="{{ asset('assets/img/навесной шкаф.jpg') }}" alt=""
+                                        width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a href="{{ route('locker') }}">Навесные
                                                 шкафы</a></h5>
-                                        {{-- <div class="thumbnail-classic-price">$10.99</div> --}}
+                                     
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-3.jpg"
-                                                    data-lightgallery="item"><img src="" alt=""
-                                                        width="270" height="250" /></a></div>
-                                            {{-- <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div> --}}
+                                      
                                         </div>
                                     </div>
                                 </div>
@@ -223,22 +207,15 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="" alt="" width="270"
-                                        height="250" /> </div>
+                                <div class="thumbnail-classic-figure"><img class="fgh" src="{{ asset('assets/img/тумба с рак (2).jpg') }}"
+                                        alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
                                         <h5 class="thumbnail-classic-title"><a href="{{ route('skins') }}">
                                                 Тумбы с раковинами</a></h5>
-                                        {{-- <div class="thumbnail-classic-price">$13.99</div> --}}
+                                  
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-4.jpg"
-                                                    data-lightgallery="item"><img src="" alt=""
-                                                        width="270" height="250" /></a></div>
-                                            {{-- <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div> --}}
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -247,45 +224,31 @@
                         <div class="col-sm-6 col-lg-4 col-xl-3 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-5.jpg"
+                                <div class="thumbnail-classic-figure"><img class="fgh" src="{{ asset('assets/img/зеркало.jpg') }}"
                                         alt="" width="270" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="{{ route('mirror') }}">Зеркала</a></h5>
-                                        {{-- <div class="thumbnail-classic-price">$14.99</div> --}}
+                                        <h5 class="thumbnail-classic-title"><a href="{{ route('mirror') }}">Зеркала</a>
+                                        </h5>
+                                        
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-5.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-5.jpg"
-                                                        alt="" width="270" height="250" /></a></div>
-                                            {{-- <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div> --}}
+                                         
                                         </div>
                                     </div>
                                 </div>
                             </article>
                         </div>
                         <div class="col-sm-6 col-lg-4 col-xl-6 isotope-item">
-                            <!-- Thumbnail Classic-->
+                          
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-6.jpg"
+                                <div class="thumbnail-classic-figure"><img class="fgh" src="{{ asset('assets/img/унитазы.png') }}"
                                         alt="" width="570" height="530" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Wedding
-                                                Furnitures</a></h5>
-                                        <div class="thumbnail-classic-price">$16.99</div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">унитазы</a></h5>
+                                      
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-6.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-6.jpg"
-                                                        alt="" width="570" height="530" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -294,27 +257,58 @@
                         <div class="col-sm-6 col-lg-8 col-xl-6 isotope-item">
                             <!-- Thumbnail Classic-->
                             <article class="thumbnail-classic block-1">
-                                <div class="thumbnail-classic-figure"><img src="images/masonry-gallery/image-7.jpg"
+                                <div class="thumbnail-classic-figure"><img class="fgh" src="{{ asset('assets/img/зеркальные шкафы.jpg') }}"
                                         alt="" width="570" height="250" /> </div>
                                 <div class="thumbnail-classic-caption">
                                     <div>
-                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">Pies</a></h5>
-                                        <div class="thumbnail-classic-price">$10.99</div>
+                                        <h5 class="thumbnail-classic-title"><a href="single-product.html">зеркальные
+                                                шкафы</a>
+                                        </h5>
+                                    
                                         <div class="thumbnail-classic-button-wrap">
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
-                                                    href="images/masonry-gallery/image-7.jpg"
-                                                    data-lightgallery="item"><img src="images/masonry-gallery/image-7.jpg"
-                                                        alt="" width="570" height="250" /></a></div>
-                                            <div class="thumbnail-classic-button"><a
-                                                    class="button button-secondary-3 button-zakaria fl-bigmug-line-shopping202"
-                                                    href="cart-page.html"></a></div>
+                                       
                                         </div>
                                     </div>
                                 </div>
                             </article>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section> --}}
+        <section class="section section-md bg-default">
+            <div class="container-fluid isotope-wrap isotope-custom-2">
+                <div class="isotope-filters">
+                    <button
+                        class="isotope-filters-toggle button button-sm button-icon button-icon-right button-default-outline"
+                        data-custom-toggle=".isotope-filters-list" data-custom-toggle-disable-on-blur="true"
+                        data-custom-toggle-hide-on-blur="true"><span
+                            class="icon mdi mdi-chevron-down"></span>Filter</button>
+                    <h2 class="text-transform-capitalize wow fadeScale">@lang('public.Gallery')</h2>
+                </div>
+                <div class="row row-30 isotope" data-lightgallery="group">
+                    @foreach ($pic as $pics)
+                        <div class="col-sm-6 col-md-6 col-xl-4 isotope-item" data-filter="Type 1">
+                            <article class="thumbnail-classic block-1">
+                                <div class="thumbnail-classic-figure">
+                                    <img src="{{ asset('storage/' . $pics->image) }}" alt=""
+                                        style="width: 370px;height:315px;object-fit:contain;" />
+                                </div>
+                                <div class="thumbnail-classic-caption">
+                                    <div>
+                                        <div class="thumbnail-classic-button-wrap">
+                                            <div class="thumbnail-classic-button"><a
+                                                    class="button button-gray-6 button-zakaria fl-bigmug-line-search74"
+                                                    href="{{ asset('storage/' . $pics->image) }}" data-lightgallery="item"><img
+                                                        src="{{ asset('storage/' . $pics->image) }}" alt=""
+                                                        width="370" height="315" /></a></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -350,56 +344,64 @@
                 <div class="owl-carousel" data-items="1" data-sm-items="2" data-md-items="4" data-lg-items="5"
                     data-margin="30" data-dots="true" data-autoplay="true">
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/kirovit.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/kirovit.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/logotip.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/logotip.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/madera.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/madera.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/melana.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{{ asset('assets/images/logo/melana.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/rosa.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/rosa.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/santek.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/santek.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/untitled-4.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/untitled-4.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>
                             </figure>
                         </a> </article>
                     <article class=" box-md"> <a class="" href="#">
-                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/untitled-5.webp') }}" alt="" />
+                            <figure class="logo-grey-style"> <img src="{ asset('assets/images/logo/untitled-5.webp') }}"
+                                    alt="" />
                                 <figcaption>
                                     <h5>Emmy</h5>
                                 </figcaption>

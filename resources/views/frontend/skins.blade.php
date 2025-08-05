@@ -5,6 +5,16 @@
         .price-none {
             text-decoration: none !important;
         }
+         article{
+            height: 500px;
+        }
+        .product-figure{
+            height: 250px !important;
+        }
+        .product-figure img{
+            height:  100% !important;
+            object-fit: contain !important;
+        }
     </style>
     <section class="breadcrumbs-custom">
         <div class="parallax-container breadcrumbs_section">
@@ -50,6 +60,16 @@
                                             <div class="product-price product-price-old price-none">
                                                Emmy
                                             </div>
+                                        </div>
+                                        <div class="bigvmn" style="padding-top:30px;padding-bottom:30px;">
+                                            @if ($pencil->available)
+                                                <div class="availability" style="color: green; font-weight: bold;">В
+                                                    наличии: Есть</div>
+                                            @else
+                                                <div class="availability" style="color: red; font-weight: bold;">В наличии:
+                                                    Нет</div>
+                                            @endif
+
                                         </div>
                                     </div>
                                     <div class="product-button-wrap">

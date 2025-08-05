@@ -14,7 +14,7 @@ return
         'Articles' => 'Статьи',
         'Gallery' => 'Галерея',
         'bathscreen' => 'Экрани пад вану',
-        'panels' => 'Панели',
+        'panels' => 'Пеналы',
         'wallcabinets' => 'Навесные шкафы',
         'Contactus' => 'Свяжитесь с нами',
         'Moscow' => 'Москва ',

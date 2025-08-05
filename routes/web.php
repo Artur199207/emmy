@@ -18,7 +18,10 @@ use App\Http\Controllers\SkinsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Auth\CustomAuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PicController;
+use App\Http\Controllers\SearchController;
 
+Route::get('/search', [SearchController::class, 'index'])->name('search');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
 Route::get('/contactis', [ContactController::class, 'getAll'])->name('contactis');
@@ -45,6 +48,12 @@ Route::get('/showblog/{id}', [FrontendController::class, 'showblog'])->name('blo
 Route::get('/bath', function () {
     return view('frontend.bath');
 })->name('bath');
+Route::get('/gallerey', function () {
+    return view('frontend.gallerey');
+})->name('gallerey');
+Route::get('/soon', function () {
+    return view('frontend.soon');
+})->name('soon');
 Route::get('/pencil', function () {
     return view('frontend.pencil');
 })->name('pencil');
@@ -89,6 +98,7 @@ Route::get('/mirror', [FrontendController::class, 'showMirror'])->name('mirror')
 Route::get('/abouteUs', [FrontendController::class, 'showabouteUs'])->name('abouteUs');
 Route::get('/application', [FrontendController::class, 'showaApplication'])->name('application');
 Route::get('/price', [FrontendController::class, 'showShipings'])->name('price');
+Route::get('/stati', [FrontendController::class, 'showStati'])->name('stati');
 
 Route::get('/ourTeam', [FrontendController::class, 'showaTeam'])->name('ourTeam');
 
@@ -193,4 +203,13 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/team/{shiping}/edit', [TeamController::class, 'edit'])->name('team.edit');
     Route::put('/team/{shiping}', [TeamController::class, 'update'])->name('team.update');
     Route::delete('/team/{shiping}', [TeamController::class, 'destroy'])->name('team.destroy');
+
+ Route::get('/pic', [PicController::class, 'index'])->name('pic.index');
+    Route::get('/pic/create', [PicController::class, 'create'])->name('pic.create');
+    Route::post('/pic', [PicController::class, 'store'])->name('pic.store');
+    Route::get('/pic/{shiping}/edit', [PicController::class, 'edit'])->name('pic.edit');
+    Route::put('/pic/{shiping}', [PicController::class, 'update'])->name('pic.update');
+    Route::delete('/pic/{shiping}', [PicController::class, 'destroy'])->name('pic.destroy');
+    
+        Route::resource('countdowns', \App\Http\Controllers\Admin\CountdownController::class);
 });

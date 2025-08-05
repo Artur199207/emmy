@@ -10,6 +10,7 @@ use App\Models\Lockers;
 use App\Models\Mirror;
 use App\Models\Offer;
 use App\Models\Pencil;
+use App\Models\Pic;
 use App\Models\Product;
 use App\Models\Shiping;
 use App\Models\Skins;
@@ -25,7 +26,8 @@ class FrontendController extends Controller
         $offers = Offer::all();
         $products = Product::all();
         $blog = Blog::all();
-        return view('frontend.index', compact('banners', 'shipings', 'offers', 'products', 'blog'));
+        $pic = Pic::all();
+        return view('frontend.index', compact('banners', 'shipings', 'offers', 'products', 'blog','pic'));
     }
     public function showProduct($id)
     {
@@ -102,5 +104,10 @@ class FrontendController extends Controller
 {
     $shipings = Shiping::all();
     return view('frontend.price', compact('shipings'));
+}
+   public function showStati()
+{
+    $blog = Blog::all();
+    return view('frontend.stati', compact('blog'));
 }
 }

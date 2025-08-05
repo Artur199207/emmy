@@ -230,10 +230,10 @@
 
                      </ul>
                  </li>
-                  <li class="menu-item">
+                 <li class="menu-item">
                      <a href="javascript:void(0);" class="menu-link menu-toggle">
                          <i class="menu-icon tf-icons bx bx-layout"></i>
-                         <div class="text-truncate" data-i18n="Layouts">Наша команда  </div>
+                         <div class="text-truncate" data-i18n="Layouts">Наша команда </div>
                      </a>
 
                      <ul class="menu-sub">
@@ -250,6 +250,67 @@
 
                      </ul>
                  </li>
+                 <li class="menu-item">
+                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                         <i class="menu-icon tf-icons bx bx-layout"></i>
+                         <div class="text-truncate" data-i18n="Layouts">прайст лист</div>
+                     </a>
+
+                     <ul class="menu-sub">
+                         <li class="menu-item">
+                             <a href="{{ route('team.create') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Добавить </div>
+                             </a>
+                         </li>
+                         <li class="menu-item">
+                             <a href="{{ route('team.index') }}" class="menu-link">
+                                 <div class="skins-truncate" data-i18n="Blank">Просматривать </div>
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
+                     <li class="menu-item">
+                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                         <i class="menu-icon tf-icons bx bx-layout"></i>
+                         <div class="text-truncate" data-i18n="Layouts">galerey</div>
+                     </a>
+
+                     <ul class="menu-sub">
+                         <li class="menu-item">
+                             <a href="{{ route('pic.create') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Blank">Добавить </div>
+                             </a>
+                         </li>
+                         <li class="menu-item">
+                             <a href="{{ route('pic.index') }}" class="menu-link">
+                                 <div class="skins-truncate" data-i18n="Blank">Просматривать </div>
+                             </a>
+                         </li>
+
+                     </ul>
+                 </li>
+                 {{-- <li class="menu-item">
+                     <a href="javascript:void(0);" class="menu-link menu-toggle">
+                         <i class="menu-icon tf-icons bx bx-time"></i>
+                         <div class="text-truncate" data-i18n="Countdown">Հետհաշվարկ</div>
+                     </a>
+
+                     <ul class="menu-sub">
+                         <li class="menu-item">
+                             <a href="{{ route('admin.countdowns.create') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="Add">Ավելացնել</div>
+                             </a>
+                         </li>
+                         <li class="menu-item">
+                             <a href="{{ route('admin.countdowns.index') }}" class="menu-link">
+                                 <div class="text-truncate" data-i18n="View">Դիտել</div>
+                             </a>
+                         </li>
+                     </ul>
+                 </li> --}}
+
+
              </ul>
          </aside>
          <div class="main-section">

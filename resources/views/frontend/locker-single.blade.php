@@ -96,7 +96,7 @@
                 <div class="col-lg-6">
                     <div class="single-product">
                         <h6>
-                            {{ $locker->available === 1 ? 'Есть в наличии' : ($locker->available === 0 ? 'Нет в наличии' : 'Данных нет') }}
+                           {!! app()->getLocale() === 'ru' ? $locker->titleRu : $locker->titleEn !!}
                         </h6>
 
                         <h3 class="text-transform-none font-weight-medium">{!! app()->getLocale() === 'ru' ? $locker->spaceNameRu : $locker->spaceNameEn !!}</h3>
